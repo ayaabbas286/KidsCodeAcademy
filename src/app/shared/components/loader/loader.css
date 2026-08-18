@@ -1,0 +1,151 @@
+.loader {
+  position: fixed;
+  direction: ltr !important;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f8fc;
+}
+
+.loader-content {
+  text-align: center;
+  border: 2px solid var(--primary);
+  padding: 50px;
+  border-radius: 50%;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.loader-logo {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Name
+========================= */
+
+.loader-name {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: #20233f;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.loader-letter {
+  display: inline-block;
+}
+
+.loader-space {
+  width: 10px;
+}
+
+.loader-subtitle {
+  margin-top: 4px;
+
+  color: #6c63ff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 5px;
+}
+
+/* =========================
+   Progress
+========================= */
+
+.loader-progress {
+  width: 220px;
+
+  height: 5px;
+
+  margin: 35px auto 18px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #e5e4f2;
+}
+
+.loader-progress-bar {
+  width: 0;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #6c63ff;
+}
+
+.loader-text {
+  color: #777b8e;
+
+  font-size: 14px;
+
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .loader {
+    padding: 20px;
+  }
+
+  .loader-content {
+    width: min(85vw, 320px);
+    height: min(85vw, 320px);
+
+    padding: 35px 20px;
+  }
+
+  .loader-logo {
+    margin-bottom: 12px;
+  }
+
+  .logo-container {
+    transform: scale(0.8);
+  }
+
+  .loader-name {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  /*
+  .loader-space {
+    width: 6px;
+  }
+
+  .loader-subtitle {
+    margin-top: 3px;
+
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+
+  .loader-progress {
+    width: 65%;
+    max-width: 190px;
+
+    height: 4px;
+
+    margin: 25px auto 14px;
+  }
+
+  .loader-text {
+    font-size: 11px;
+    white-space: nowrap;
+  } */
+}

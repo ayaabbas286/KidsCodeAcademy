@@ -1,0 +1,67 @@
+<nav class="navbar">
+  <div class="container-custom">
+    <!-- Logo -->
+    <app-logo></app-logo>
+
+    <!-- Navigation -->
+    <ul class="nav-links">
+      <li><a href="#">الرئيسية</a></li>
+      <li><a href="#">الدورات</a></li>
+      <li><a href="#">المسارات التعليمية</a></li>
+      <li><a href="#">المشاريع</a></li>
+      <li><a href="#">من نحن</a></li>
+      <li><a href="#">تواصل معنا</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-buttons">
+      <a href="#" class="login-btn normal-btn">تسجيل الدخول</a>
+
+      <a href="#" class="register-btn">إنشاء حساب</a>
+
+      <button class="btn-main">🚀 ابدأ التعلم</button>
+      <!-- Language -->
+      <button class="language-btn">
+        <i class="bi bi-globe2"></i>
+        AR
+      </button>
+    </div>
+    <!-- Mobile Toggle Button -->
+    <div class="nav-buttons-mobile">
+      <a href="#" class="login-btn normal-btn">تسجيل الدخول</a>
+    </div>
+    <!-- Mobile Toggle Button -->
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <i class="bi" [class.bi-list]="!isMenuOpen" [class.bi-x-lg]="isMenuOpen"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <app-logo></app-logo>
+    <ul>
+      <li><a href="#">الرئيسية</a></li>
+      <li><a href="#">الدورات</a></li>
+      <li><a href="#">المسارات التعليمية</a></li>
+      <li><a href="#">المشاريع</a></li>
+      <li><a href="#">من نحن</a></li>
+      <li><a href="#">تواصل معنا</a></li>
+    </ul>
+
+    <div class="mobile-actions">
+      <button class="language-btn">
+        <i class="bi bi-globe2"></i>
+        AR
+      </button>
+      <a href="#" class="register-btn">إنشاء حساب</a>
+      <a href="#" class="login-btn"> تسجيل الدخول </a>
+
+      <button class="btn-main">🚀 ابدأ التعلم</button>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  @if (isMenuOpen) {
+    <div class="overlay" (click)="toggleMenu()"></div>
+  }
+</nav>

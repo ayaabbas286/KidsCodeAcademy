@@ -1,0 +1,52 @@
+h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-dark);
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
