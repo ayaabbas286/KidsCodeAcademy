@@ -34,11 +34,17 @@
   transition: var(--transition);
   position: relative;
 }
-
+/* Active state */
+.nav-links a.active {
+  color: var(--primary);
+}
 .nav-links a:hover {
   color: var(--primary);
 }
 
+.nav-links a.active::after {
+  width: 100%;
+}
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -50,7 +56,10 @@
   border-radius: 20px;
   transition: var(--transition);
 }
-
+.login-btn.active,
+.register-btn.active {
+  color: var(--primary);
+}
 .nav-links a:hover::after {
   width: 100%;
 }
@@ -146,6 +155,10 @@
 }
 .mobile-menu a:hover {
   color: var(--primary);
+}
+.mobile-menu a.active {
+  color: var(--primary);
+  font-weight: 600;
 }
 .bi-x-lg {
   z-index: 1001;

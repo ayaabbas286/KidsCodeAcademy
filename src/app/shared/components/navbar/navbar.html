@@ -5,21 +5,24 @@
 
     <!-- Navigation -->
     <ul class="nav-links">
-      <li><a href="#">الرئيسية</a></li>
-      <li><a href="#">الدورات</a></li>
-      <li><a href="#">المسارات التعليمية</a></li>
-      <li><a href="#">المشاريع</a></li>
-      <li><a href="#">من نحن</a></li>
-      <li><a href="#">تواصل معنا</a></li>
+      <li>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+          >الرئيسية</a
+        >
+      </li>
+      <li><a routerLink="/courses-levels" routerLinkActive="active">الدورات</a></li>
+      <li><a routerLink="/programs" routerLinkActive="active">المسارات التعليمية</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">المشاريع</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">من نحن</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">تواصل معنا</a></li>
     </ul>
 
     <!-- Actions -->
     <div class="nav-buttons">
-      <a href="#" class="login-btn normal-btn">تسجيل الدخول</a>
+      <a routerLink="/login" routerLinkActive="active" class="login-btn normal-btn">تسجيل الدخول</a>
 
-      <a href="#" class="register-btn">إنشاء حساب</a>
-
-      <button class="btn-main">🚀 ابدأ التعلم</button>
+      <a routerLink="/register" routerLinkActive="active" class="register-btn">إنشاء حساب</a>
+      <button class="btn-main" routerLink="/projects">🚀 ابدأ التعلم</button>
       <!-- Language -->
       <button class="language-btn">
         <i class="bi bi-globe2"></i>
@@ -28,7 +31,7 @@
     </div>
     <!-- Mobile Toggle Button -->
     <div class="nav-buttons-mobile">
-      <a href="#" class="login-btn normal-btn">تسجيل الدخول</a>
+      <a routerLink="/login" routerLinkActive="active" class="login-btn normal-btn">تسجيل الدخول</a>
     </div>
     <!-- Mobile Toggle Button -->
     <button class="menu-toggle" (click)="toggleMenu()">
@@ -40,12 +43,30 @@
   <div class="mobile-menu" [class.open]="isMenuOpen">
     <app-logo></app-logo>
     <ul>
-      <li><a href="#">الرئيسية</a></li>
-      <li><a href="#">الدورات</a></li>
-      <li><a href="#">المسارات التعليمية</a></li>
-      <li><a href="#">المشاريع</a></li>
-      <li><a href="#">من نحن</a></li>
-      <li><a href="#">تواصل معنا</a></li>
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+          >الرئيسية</a
+        >
+      </li>
+      <li>
+        <a routerLink="/courses-levels" routerLinkActive="active" (click)="closeMenu()">الدورات</a>
+      </li>
+      <li>
+        <a routerLink="/programs" routerLinkActive="active" (click)="closeMenu()"
+          >المسارات التعليمية</a
+        >
+      </li>
+      <li>
+        <a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">المشاريع</a>
+      </li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">من نحن</a></li>
+      <li>
+        <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">تواصل معنا</a>
+      </li>
     </ul>
 
     <div class="mobile-actions">
@@ -53,10 +74,14 @@
         <i class="bi bi-globe2"></i>
         AR
       </button>
-      <a href="#" class="register-btn">إنشاء حساب</a>
-      <a href="#" class="login-btn"> تسجيل الدخول </a>
+      <a routerLink="/register" routerLinkActive="active" (click)="closeMenu()" class="register-btn"
+        >إنشاء حساب</a
+      >
+      <a routerLink="/login" routerLinkActive="active" (click)="closeMenu()" class="login-btn">
+        تسجيل الدخول
+      </a>
 
-      <button class="btn-main">🚀 ابدأ التعلم</button>
+      <button class="btn-main" routerLink="/projects" (click)="closeMenu()">🚀 ابدأ التعلم</button>
     </div>
   </div>
 

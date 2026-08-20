@@ -1,0 +1,93 @@
+footer {
+  font-family: 'ibm plex sans', sans-serif;
+  border: 2px solid blue;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  background: var(--primary-dark);
+}
+.footer-top {
+  padding-bottom: 40px;
+}
+.footer-top h4 {
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 18px;
+}
+.footer-desc {
+  color: white !important;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 20px;
+}
+
+.footer-bottom a,
+.footer-bottom p,
+.footer-main-links a,
+.footer-acc-links a,
+.footer-contact-links li {
+  color: rgb(200, 199, 199) !important;
+}
+
+.footer-logo {
+  background-color: white;
+  width: 250px;
+  border-radius: 10px;
+  margin-top: -8px;
+  margin-bottom: 14px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  color: white;
+}
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(205, 205, 205, 0.535);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  color: #cfd2e0;
+}
+.footer-social a:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.footer ul a {
+  transition: var(--transition);
+}
+.footer-bottom a:hover,
+.footer-main-links a:hover,
+.footer-acc-links a:hover,
+.footer-contact-links li:hover {
+  color: white !important;
+}
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #a9acc2;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 0;
+}
+
+.footer-bottom p,
+.footer-legal a {
+  font-size: 14px;
+}
+
+.footer-legal a:hover {
+  color: white !important;
+}

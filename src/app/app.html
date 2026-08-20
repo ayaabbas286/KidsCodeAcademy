@@ -1,7 +1,10 @@
 @if (isLoading) {
   <app-loader (loadingFinished)="finishLoading()"> </app-loader>
 }
+<app-navbar />
+<app-route-loader />
+<div class="main-content">
+  <router-outlet />
+</div>
 
-@if (!isLoading) {
-  <app-home></app-home>
-}
+<app-footer />
