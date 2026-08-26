@@ -1,0 +1,16 @@
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--text-dark, #1a1a2e);
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 24px;
+  background: #f7f7fb;
+}

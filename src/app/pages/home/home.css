@@ -1,0 +1,105 @@
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+  font-family: 'cairo';
+}
+.hero-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 500px;
+  padding: 40px;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.shape-1 {
+  width: 90px;
+  height: 90px;
+  background: var(--primary);
+  top: 4%;
+  left: 2%;
+}
+
+.shape-2 {
+  width: 70px;
+  height: 70px;
+  background: #ffcf5c;
+  top: 70%;
+  left: 56%;
+}
+
+.shape-3 {
+  width: 70px;
+  height: 70px;
+  background: #7ee0c3;
+  top: 14%;
+  right: 5%;
+}
+
+.shape-4 {
+  width: 60px;
+  height: 60px;
+  background: #e07eac;
+  top: 22%;
+  right: 48%;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(91, 95, 238, 0.1), rgba(126, 224, 195, 0.1));
+  border: 1px solid rgba(91, 95, 238, 0.2);
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+}
+.hero-highlight {
+  background: linear-gradient(90deg, var(--primary), #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-robot::before {
+  content: '';
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  /* inset: -40px; */
+  background: linear-gradient(135deg, rgba(91, 95, 238, 0.15), rgba(126, 224, 195, 0.15));
+  border-radius: 50%;
+  z-index: -1;
+  border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
+  filter: blur(2px);
+  transform: translate(0%, 0%);
+  animation: blob-morph 8s ease-in-out infinite;
+}
+
+@keyframes blob-morph {
+  0%,
+  100% {
+    border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
+  }
+  50% {
+    border-radius: 55% 45% 40% 60% / 45% 55% 50% 45%;
+  }
+}
+@media (max-width: 767px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 800px;
+  }
+}

@@ -1,10 +1,4 @@
-@if (isLoading) {
-  <app-loader (loadingFinished)="finishLoading()"> </app-loader>
+@if (!loaderService.EndSplash()) {
+  <app-loader (loadingFinished)="loaderService.EndSplashLoader()"> </app-loader>
 }
-<app-navbar />
-<app-route-loader />
-<div class="main-content">
-  <router-outlet />
-</div>
-
-<app-footer />
+<router-outlet />
