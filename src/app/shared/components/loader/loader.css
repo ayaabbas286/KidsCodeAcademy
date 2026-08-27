@@ -123,29 +123,5 @@
     font-size: 18px;
     letter-spacing: 1px;
   }
-  /*
-  .loader-space {
-    width: 6px;
-  }
-
-  .loader-subtitle {
-    margin-top: 3px;
-
-    font-size: 10px;
-    letter-spacing: 4px;
-  }
-
-  .loader-progress {
-    width: 65%;
-    max-width: 190px;
-
-    height: 4px;
-
-    margin: 25px auto 14px;
-  }
-
-  .loader-text {
-    font-size: 11px;
-    white-space: nowrap;
-  } */
+  
 }

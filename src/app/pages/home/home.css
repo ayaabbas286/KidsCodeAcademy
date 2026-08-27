@@ -100,6 +100,37 @@
   .hero-container {
     display: flex;
     flex-direction: column;
-    min-height: 800px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  .floating-shape {
+    display: none;
+  }
+  .hero-inner {
+    font-size: 16px;
+  }
+  .hero-title {
+    font-size: 3.3rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .hero-inner {
+    margin: 20px;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-section {
+    border: 1px solid red;
+    padding: 5px;
+    width: 100%;
+  }
+  .shape-3,
+  .shape-4 {
+    display: none;
+  }
+  .hero-title {
+    font-size: 3.3rem;
   }
 }
