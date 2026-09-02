@@ -1,31 +1,43 @@
-<section class="hero-section">
-  <div class="hero-bg">
-    <span class="floating-shape shape-1"></span>
-    <span class="floating-shape shape-2"></span>
-    <span class="floating-shape shape-3"></span>
-    <span class="floating-shape shape-4"></span>
-  </div>
-  <div class="hero-container">
-    <div class="container-custom hero-inner">
-      <div class="hero-text">
-        <h1 class="hero-title">
-          <span class="hero-line"> ابدأ رحلة طفلك </span>
-          <span class="hero-line mx-2 hero-highlight">في عالم البرمجة </span>
-        </h1>
-        <p class="hero-desc">
-          نعلّم الأطفال البرمجة بطريقة ممتعة وعملية، من أول خطوة في الكود لحد بناء مشروعهم الأول
-        </p>
+<section class="hero-main">
+  <div class="hero-section">
+    <div class="hero-bg">
+      <span class="floating-shape shape-1"></span>
+      <span class="floating-shape shape-2"></span>
+      <span class="floating-shape shape-3"></span>
+      <span class="floating-shape shape-4"></span>
+      <span class="floating-shape shape-5"></span>
+      <span class="floating-shape shape-6"></span>
+    </div>
+    <div class="hero-container container row m-auto">
+      <div class="hero-inner col-12 col-md-12 col-lg-6">
+        <div class="hero-text">
+          <div class="hero-title">
+            <p class="hero-badge">
+              <i class="bi bi-star-fill"></i>
+              تعلم البر<span>مجة خطوة بخطوة</span>
+            </p>
+            <h1 class="hero-line">ابدأ رحلة طفلك</h1>
+            <span class="hero-line mx-2 hero-highlight">فى عالم البرمجة </span>
+          </div>
+          <p class="hero-desc">
+            نعلم الأطفال البرمجة بطريقة ممتعة وتفاعلية من الأساسيات إلى بناء المشاريع الحقيقية مع
+            مدربين متخصصين
+          </p>
 
-        <div class="hero-actions">
-          <a routerLink="/programs" class="btn-main">🚀 ابدأ التعلم</a>
-          <a routerLink="/projects" class="btn-outline"> المشاريع </a>
+          <div class="hero-actions mt-4">
+            <a routerLink="/programs" class="start-learnBtn"
+              ><i class="bi bi-mortarboard-fill"></i> اكتشف البرامج</a
+            >
+            <a routerLink="/projects" class="projectBtn normal-btn mx-2"
+              ><i class="bi bi-calendar3"></i> احجز حصة تجريبية مجانية
+            </a>
+          </div>
         </div>
       </div>
-      <p class="hero-badge">
-        <i class="bi bi-rocket-takeoff-fill"></i>
-        أفضل أكاديمية برمجة للأطفال
-      </p>
+      <div #HeroSection class="hero-robot col-12 col-md-12 col-lg-6"></div>
     </div>
-    <div #HeroSection class="hero-robot"></div>
   </div>
+</section>
+<section class="why-us">
+  <app-why-us></app-why-us>
 </section>

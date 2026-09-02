@@ -1,0 +1,58 @@
+
+.why-us {
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.why-us__title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.why-us__card {
+  height: 100%; /* عشان كل الكاردز في نفس الصف يبقوا بنفس الطول */
+  padding: 28px 20px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.why-us__icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.why-us__card-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.why-us__card-desc {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ===== Enter animation (staggered) ===== */
+.card-enter {
+  animation: cardEnter 0.6s ease-out both;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-enter {
+    animation: none;
+  }
+}

@@ -2,13 +2,15 @@ import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@ang
 import lottie, { AnimationItem } from 'lottie-web';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { WhyUs } from '../why-us/why-us';
+import { RouterLink } from '@angular/router';
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [WhyUs, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -44,7 +46,7 @@ export class Home implements AfterViewInit, OnDestroy {
       loop: true,
       renderer: 'svg',
       autoplay: true,
-      path: 'assets/lottie/Coding.json',
+      path: 'assets/lottie/Web Development.json',
     });
 
     this.idleTween = gsap.to(this.HeroSection.nativeElement, {
