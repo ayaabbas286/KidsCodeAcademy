@@ -204,6 +204,7 @@
     right: 90%;
   }
 }
+/* mobile screen  */
 @media (max-width: 767px) {
   .hero-container {
     display: flex;
@@ -214,29 +215,39 @@
   .floating-shape {
     display: none;
   }
-  .hero-inner {
-    font-size: 16px;
-  }
+
   .hero-title {
     font-size: 3.3rem;
     line-height: 1.2;
     text-align: center;
   }
   .hero-inner {
-    margin: 20px;
+    font-size: 16px;
     text-align: center;
   }
 
   .start-learnBtn,
   .projectBtn {
     padding: 10px 20px;
-    width: 190px;
+
     margin: 5px;
+    width: auto;
   }
   .hero-robot {
     margin-top: 20px;
     width: 450px;
     height: 450px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-robot {
+    width: 80%;
+    height: 80%;
+    margin: 20px auto;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
