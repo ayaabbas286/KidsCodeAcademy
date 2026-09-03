@@ -3,7 +3,7 @@
 ========================= */
 @font-face {
   font-family: 'Cairo';
-  src: (url('../assets/fonts/Cairo/static/Cairo-Regular.ttf') format('truetype'));
+  src: url('../assets/fonts/Cairo/static/Cairo-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
@@ -58,4 +58,39 @@
   font-family: 'Poppins';
   src: url('../assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
   font-weight: 500;
+}
+/* =========================
+   Alexandria
+========================= */
+
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../assets/fonts/Alexandria/static/Alexandria-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../assets/fonts/Alexandria/static/Alexandria-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../assets/fonts/Alexandria/static/Alexandria-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../assets/fonts/Alexandria/static/Alexandria-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
