@@ -4,13 +4,14 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { WhyUs } from '../why-us/why-us';
 import { RouterLink } from '@angular/router';
+import { Programs } from '../programs/programs';
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [WhyUs, RouterLink],
+  imports: [WhyUs, RouterLink, Programs],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
