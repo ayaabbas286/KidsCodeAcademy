@@ -1,5 +1,31 @@
-<div class="programs-section">
-    <div class="title-txt">
-        <h1></h1>
-    </div>
+<div class="programs-section p-4 container">
+  <div class="title-txt p-3 mb-2">
+    <h3 class="mb-2"><i class="bi bi-mortarboard-fill"></i> البرامج التعليمية</h3>
+    <p>برامج تأسيسية متدرجة حسب العمر والمستوي لبناء أساس قوي في البرمجة</p>
+  </div>
+  <div class="programs-cards-container row g-3">
+    @for (program of programs; track program.id) {
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="program-card card" [ngClass]="program.classStyle">
+          <div class="img-container">
+            <img [src]="program.image" [alt]="program.title" class="img-fluid" />
+          </div>
+          <div class="program-card-body">
+            <h5 class="program-card-title mb-3">{{ program.title }}</h5>
+            <p class="program-age">{{ program.ageRange }}</p>
+            @for (desc of program.description; track desc) {
+              <ul>
+                <li class="program-card-description">{{ desc }}</li>
+              </ul>
+            }
+          </div>
+          <div class="cardfooter p-2">
+            <a [routerLink]="program.link" class="btn">
+              عرض التفاصيل <i class="bi bi-arrow-left-short"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
 </div>

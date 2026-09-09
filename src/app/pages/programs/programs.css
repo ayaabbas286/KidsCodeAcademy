@@ -1,0 +1,158 @@
+.title-txt {
+  text-align: center;
+}
+.bi-mortarboard-fill {
+  color: var(--primary-dark);
+}
+.programs-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.programs-cards-container .card {
+  border-radius: 15px;
+  padding: 10px;
+  border: 2px solid #eee;
+}
+.programs-cards-container .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  min-height: 150px;
+}
+
+.img-container img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+}
+.program-card-body {
+  height: 170px;
+}
+.program-card-body h5 {
+  font-weight: 700;
+}
+.cardfooter .btn {
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #5555554b;
+  border-radius: 0;
+}
+.explorer {
+  background-color: #f5e6fd;
+}
+.beginner {
+  background-color: #deedff;
+}
+.inventor {
+  background-color: #dbffe2;
+}
+.expertDev {
+  background-color: #ffefcf;
+}
+.btn-explorer {
+  color: var(--primary-dark);
+}
+
+.btn-beginner {
+  color: #f5a623;
+}
+
+.btn-inventor {
+  color: #23f5a6;
+}
+
+.btn-expertDev {
+  color: #f52323;
+}
+.program-card-description {
+  font-size: 16px;
+  margin-right: 10px;
+  line-height: 0.75;
+}
+.program-card-body ul {
+  list-style-type: disc;
+  margin-right: 25px;
+  padding-right: 10px;
+  line-height: 0.75;
+}
+/* li circles  */
+.explorer li::marker {
+  color: var(--primary-dark);
+}
+.beginner li::marker {
+  color: #346bbe;
+}
+.inventor li::marker {
+  color: #34be60;
+}
+.expertDev li::marker {
+  color: #f5b323;
+}
+/* age badge style  */
+.program-age {
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 15px;
+  display: inline-block;
+  width: 105px;
+  padding: 2px 10px;
+  color: #fff;
+}
+.explorer .program-age {
+  background-color: var(--primary-dark);
+}
+.beginner .program-age {
+  background-color: #346bbe;
+}
+.inventor .program-age {
+  background-color: #34be60;
+}
+.expertDev .program-age {
+  background-color: #f5b323;
+}
+
+/* DetailsBtn  */
+.explorer .btn {
+  color: var(--primary-dark);
+}
+.beginner .btn {
+  color: #346bbe;
+}
+.inventor .btn {
+  color: #34be60;
+}
+.expertDev .btn {
+  color: #f5b323;
+}
+.bi-arrow-left-short {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+  width: 20px;
+  margin-top: -3px;
+  margin-right: 5px;
+}
+.card .btn:hover {
+  transform: translateY(-2px);
+  transition: var(--transition);
+}
+@media (min-width: 992px) and (max-width: 1399px) {
+  .program-card {
+      /* width:225px */
+  }
+  .program-card li{
+   font-size: 14px;
+   line-height: 1.2;
+  
+  }
+  .program-card-body{
+    height: 210px;
+  }
+    .program-card .btn{
+     
+      margin-top: 5px;
+    }
+}

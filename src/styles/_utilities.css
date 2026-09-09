@@ -55,3 +55,6 @@
 
   margin-bottom: 70px;
 }
+.bordered {
+  border: 1px solid var(--primary-dark);
+}
