@@ -7,6 +7,7 @@
     @for (program of programs; track program.id) {
       <div class="col-12 col-md-6 col-lg-3">
         <div class="program-card card" [ngClass]="program.classStyle">
+           <span id=""cardIcon><i [class]="program.icon"></i></span>
           <div class="img-container">
             <img [src]="program.image" [alt]="program.title" class="img-fluid" />
           </div>

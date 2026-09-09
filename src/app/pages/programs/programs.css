@@ -139,20 +139,45 @@
   transform: translateY(-2px);
   transition: var(--transition);
 }
+/* progrm icon style */
+.card span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 22px;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.explorer span {
+  background-color: var(--primary-dark);
+}
+.beginner span {
+  background-color: #346bbe;
+}
+.inventor span {
+  background-color: #34be60;
+}
+.expertDev span {
+  background-color: #f5b323;
+}
 @media (min-width: 992px) and (max-width: 1399px) {
   .program-card {
-      /* width:225px */
+    /* width:225px */
   }
-  .program-card li{
-   font-size: 14px;
-   line-height: 1.2;
-  
+  .program-card li {
+    font-size: 14px;
+    line-height: 1.2;
   }
-  .program-card-body{
+  .program-card-body {
     height: 210px;
   }
-    .program-card .btn{
-     
-      margin-top: 5px;
-    }
+  .program-card .btn {
+    margin-top: 5px;
+  }
 }

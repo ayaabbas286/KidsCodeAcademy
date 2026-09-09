@@ -13,6 +13,7 @@ export interface program {
   skills: string[];
   link: string;
   classStyle: string;
+  icon?: string;
 }
 @Component({
   selector: 'app-programs',
@@ -35,8 +36,7 @@ export class Programs {
       skills: ['التفكير المنطقي', 'ScratchJr', 'حل المشكلات'],
       link: '/',
       classStyle: 'explorer',
-     
-      
+      icon: 'fa-solid fa-wand-magic-sparkles',
     },
     {
       id: 2,
@@ -54,8 +54,7 @@ export class Programs {
       skills: ['Scratch', 'Loops', 'Conditions', 'Games'],
       link: '/',
       classStyle: 'beginner',
-    
-     
+      icon: 'fa-solid fa-code',
     },
     {
       id: 3,
@@ -73,8 +72,7 @@ export class Programs {
       skills: ['Python', 'Algorithms', 'Problem Solving'],
       link: '/',
       classStyle: 'inventor',
-
-      
+      icon: 'fa-brands fa-python',
     },
     {
       id: 4,
@@ -88,8 +86,7 @@ export class Programs {
       skills: ['Python', 'JavaScript', 'Web Development', 'APIs'],
       link: '/',
       classStyle: 'expertDev',
-      
-     
+      icon: 'fa-regular fa-star',
     },
   ];
 }
