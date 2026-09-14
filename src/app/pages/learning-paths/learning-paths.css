@@ -104,12 +104,15 @@
 .robot .path-link {
   color: rgb(0, 29, 176);
 }
-@media (min-width: 1200px) {
+@media (max-width: 767px) {
   .swiper-slide {
     width: 80% !important;
   }
   .title-container h6 {
     font-size: 18px;
     font-weight: bolder;
+  }
+  .path-link {
+    font-weight: 500;
   }
 }
