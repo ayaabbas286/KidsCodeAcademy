@@ -145,7 +145,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  font-size: 22px;
+  font-size: 20px;
   top: 15px;
   right: 15px;
   color: #fff;
@@ -166,6 +166,27 @@
 .expertDev span {
   background-color: #f5b323;
 }
+.all-programsBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.all-programsBtn .btn {
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+  padding: 8px 25px;
+  font-weight: 700;
+    margin: 20px;
+    border-radius: 10px;
+}
+.all-programsBtn .btn:hover{
+background-color: var(--primary-dark);
+color: #fff;
+transition: var(--transition);
+
+}
+
 @media (min-width: 992px) and (max-width: 1399px) {
   .program-card {
     /* width:225px */

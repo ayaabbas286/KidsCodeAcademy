@@ -19,6 +19,11 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/programs/programs').then((m) => m.Programs),
       },
       {
+        path: 'LearningPaths',
+        loadComponent: () =>
+          import('./pages/learning-paths/learning-paths').then((m) => m.LearningPaths),
+      },
+      {
         path: 'courses-levels',
         loadComponent: () =>
           import('./pages/courses-levels/courses-levels').then((m) => m.CoursesLevels),

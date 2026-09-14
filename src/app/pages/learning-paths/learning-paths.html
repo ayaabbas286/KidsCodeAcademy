@@ -1,0 +1,32 @@
+<section class="container learningpaths">
+  <div class="title-txt text-center p-3 mb-2">
+    <h3 class="mb-2"><i class="fa-solid fa-align-right"></i> المسارات التعليمية</h3>
+    <p>بعد بناء الأساسيات , اختر المجال الذي يناسب شغف طفلك ليتخصص به</p>
+  </div>
+  <div class="pathsCards">
+    <div class="swiper" #mySwiper dir="rtl">
+      <div class="swiper-wrapper">
+        @for (path of learningPaths; track path.id) {
+          <div class="swiper-slide" [ngClass]="path.classStyle">
+            <div class="path-card d-flex justify-center flex-column">
+              <div class="title-container d-flex justify-start w-100">
+                <div class="icon-circle">
+                  <img [src]="path.icon" [alt]="path.title" />
+                </div>
+                <h6 class="path-title">{{ path.title }}</h6>
+              </div>
+              <p class="path-desc">{{ path.description }}</p>
+              <div class="d-flex justify-start text-right">
+                <a [routerLink]="path.route" class="path-link btn">
+                  استكشف المسار <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
