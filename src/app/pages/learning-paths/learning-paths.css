@@ -108,4 +108,8 @@
   .swiper-slide {
     width: 80% !important;
   }
+  .title-container h6 {
+    font-size: 18px;
+    font-weight: 600px;
+  }
 }
