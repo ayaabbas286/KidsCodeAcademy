@@ -13,7 +13,7 @@ export class Experience {
       const el = counter.nativeElement;
       const target = Number(el.dataset['target']);
       let start = 0;
-      let step = 20;
+      let step = 50;
       const interval = setInterval(() => {
         if (start < target) {
           start += step;
