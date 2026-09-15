@@ -12,9 +12,7 @@ import { LoaderService } from './core/services/loader';
 })
 export class App {
   protected readonly title = signal('KidsCodeAcademy');
-  // isLoading = true;
-  loaderService = inject(LoaderService);
-  //   finishLoading(): void {
-  //     this.isLoading = false;
-  //   }
+
+  // loaderSe rvice = inject(LoaderService);
+ 
 }

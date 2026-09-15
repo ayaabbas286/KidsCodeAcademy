@@ -57,6 +57,10 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/privacy-policy/privacy-policy').then((m) => m.PrivacyPolicy),
       },
+      {
+        path: 'experience',
+        loadComponent: () => import('./pages/experience/experience').then((m) => m.Experience),
+      },
     ],
   },
 

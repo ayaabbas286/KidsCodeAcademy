@@ -104,6 +104,19 @@
 .robot .path-link {
   color: rgb(0, 29, 176);
 }
+.allPaths .btn {
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+  padding: 8px 25px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+.allPaths .btn:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+  transition: var(--transition);
+}
+
 @media (max-width: 767px) {
   .swiper-slide {
     width: 80% !important;

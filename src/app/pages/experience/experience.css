@@ -1,0 +1,74 @@
+.main-content {
+  margin-top: 30px;
+}
+.row {
+  /* height: 150px; */
+  background: linear-gradient(to right, #715bee, #a484fc);
+  padding: 30px;
+}
+.exp-years,
+.exp-instructors,
+.exp-project,
+.exp-students {
+  border-right: 1px solid #ffffff80;
+}
+.fa-regular,
+.fa-solid {
+  margin-left: 20px;
+  color: #fff;
+  font-size: 32px;
+}
+.exp-years {
+  border: none;
+}
+.exp-years p,
+.exp-instructors p,
+.exp-project p,
+.exp-students p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+.num {
+  font-size: 32px !important;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .exp-years,
+  .exp-instructors,
+  .exp-project,
+  .exp-students {
+    width: 45%;
+    margin: 5px auto;
+    padding: 10px;
+    border: none;
+    border: 1px solid #eeeeee5f;
+    border-radius: 15px;
+  }
+  .exp-years p,
+  .exp-instructors p,
+  .exp-project p,
+  .exp-students p {
+    margin: 0;
+    padding: 0 !important;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 767px) {
+  .exp-years,
+  .exp-instructors,
+  .exp-project,
+  .exp-students {
+    width: 100%;
+    border: 1px solid #eeeeee5f;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 15px;
+  }
+}
