@@ -200,6 +200,9 @@
   .nav-buttons {
     display: none;
   }
+  .mobile-menu {
+    padding: 10px 30px;
+  }
   .menu-toggle {
     display: flex;
     justify-content: center;
@@ -210,7 +213,7 @@
     width: 90%;
   }
   .navbar {
-    padding: 10px 0;
+    padding: 5px 0;
   }
   .bi-list::before {
     font-size: 30px;

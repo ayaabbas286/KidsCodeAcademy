@@ -13,7 +13,7 @@
 .programs-cards-container .card {
   border-radius: 15px;
   padding: 10px;
-  border: 2px solid #eee;
+ 
 }
 .programs-cards-container .img-container {
   display: flex;
@@ -42,15 +42,19 @@
 }
 .explorer {
   background-color: #f5e6fd;
+  border: 2px solid #e3b7ffec ;
 }
 .beginner {
   background-color: #deedff;
+   border: 2px solid #a5cfff ;
 }
 .inventor {
   background-color: #dbffe2;
+  border: 2px solid #87ff9f ;
 }
 .expertDev {
   background-color: #ffefcf;
+  border: 2px solid #ffd786 ;
 }
 .btn-explorer {
   color: var(--primary-dark);
@@ -170,21 +174,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .all-programsBtn .btn {
   color: var(--primary-dark);
   border: 1px solid var(--primary-dark);
   padding: 8px 25px;
   font-weight: 700;
-    margin: 20px;
-    border-radius: 10px;
+  margin: 20px;
+  border-radius: 10px;
 }
-.all-programsBtn .btn:hover{
-background-color: var(--primary-dark);
-color: #fff;
-transition: var(--transition);
-
+.all-programsBtn .btn:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+  transition: var(--transition);
 }
 
 @media (min-width: 992px) and (max-width: 1399px) {
