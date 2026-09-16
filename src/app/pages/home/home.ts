@@ -7,13 +7,14 @@ import { RouterLink } from '@angular/router';
 import { Programs } from '../programs/programs';
 import { LearningPaths } from '../learning-paths/learning-paths';
 import { Experience } from '../experience/experience';
+import { Reviews } from '../reviews/reviews';
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [WhyUs, RouterLink, Programs, LearningPaths, Experience],
+  imports: [WhyUs, RouterLink, Programs, LearningPaths, Experience, Reviews],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

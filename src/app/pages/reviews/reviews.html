@@ -1,0 +1,31 @@
+<div class="main-content container">
+  <div class="title-box text-center d-flex flex-column justify-center align-center">
+    <h3><i class="fa-solid fa-heart"></i>آراء أولياء الأمور</h3>
+    <hr />
+  </div>
+  <div class="row">
+    <div class="swiper" #mySwiper dir="rtl">
+      <div class="swiper-wrapper">
+        @for (review of reviews; track review.id) {
+          <div class="swiper-slide">
+            <div class="review-card d-flex justify-around flex-column">
+              <p class="review-text">{{ review.reviewTxt }}</p>
+              <div class="d-flex justify-between w-100">
+                <div class="title-container d-flex">
+                  <img class="parentImg" [src]="review.imgUrl" />
+                  <h6 class="parentName">{{ review.parentName }}</h6>
+                </div>
+                <div class="starsCount">
+                  @for (star of [].constructor(review.starsCount); track $index) {
+                    <i class="fa-solid fa-star"></i>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>

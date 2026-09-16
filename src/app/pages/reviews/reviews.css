@@ -1,0 +1,65 @@
+.main-content {
+  height: 500px;
+}
+.title-box {
+  margin: 30px;
+  padding: 10px;
+}
+
+.title-box hr {
+  width: 60px;
+  height: 3px;
+  background-color: #dcb8ff;
+  margin: 10px auto;
+  opacity: 0.6;
+  border: none;
+  border-radius: 20px;
+}
+.fa-heart {
+  color: #dcb8ff;
+  font-size: 30px;
+  margin-left: 15px;
+}
+.review-card {
+  border: 2px solid rgb(243, 229, 255);
+  padding: 25px 15px;
+  height: 230px;
+  border-radius: 10px;
+}
+.swiper {
+  height: 300px;
+  --swiper-pagination-bullet-width: 25px;
+  --swiper-pagination-bullet-height: 6px;
+  --swiper-pagination-bullet-border-radius: 28%;
+  --swiper-pagination-color: #8a4fd1;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+}
+.review-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 2;
+  font-size: 14px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.title-container {
+  margin-right: 20px;
+}
+.fa-star {
+  color: rgb(255, 203, 14);
+}
+.parentImg {
+  margin-top: -10px;
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 767px) {
+.swiper-slide{
+  width: 95%;
+  margin: 6px;
+}
+}

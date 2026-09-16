@@ -2,9 +2,9 @@
   margin-top: 30px;
 }
 .row {
-  /* height: 150px; */
-  background: linear-gradient(to right, #715bee, #a484fc);
+  background: linear-gradient(to right, #36249d, #7863b2);
   padding: 30px;
+  border-radius: 15px;
 }
 .exp-years,
 .exp-instructors,

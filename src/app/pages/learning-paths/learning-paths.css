@@ -64,42 +64,42 @@
 }
 .web {
   background-color: #e9d8ff;
-  border: 1px solid #dec6ff;
+  border: 1px solid #8a4fd1d4;
 }
 .web .path-link {
   color: #8a4fd1;
 }
 .ai {
   background-color: #fffbb4;
-  border: 1px solid #ffffa3;
+  border: 1px solid rgb(255, 183, 0);
 }
 .ai .path-link {
   color: rgb(255, 183, 0);
 }
 .graphic {
   background-color: #fff4d8;
-  border: 1px solid #ffe1c6;
+  border: 1px solid orangered;
 }
 .graphic .path-link {
   color: orangered;
 }
 .mobile {
   background-color: #d8ffd8;
-  border: 1px solid hsl(123, 100%, 89%);
+  border: 1px solid rgb(0, 176, 73);
 }
 .mobile .path-link {
   color: rgb(0, 176, 73);
 }
 .games {
   background-color: #fdd8ff;
-  border: 1px solid hsl(305, 100%, 89%);
+  border: 1px solid rgb(176, 0, 147);
 }
 .games .path-link {
   color: rgb(176, 0, 147);
 }
 .robot {
   background-color: #d8ebff;
-  border: 1px solid hsl(209, 100%, 85%);
+  border: 1px solid rgb(0, 29, 176);
 }
 .robot .path-link {
   color: rgb(0, 29, 176);
