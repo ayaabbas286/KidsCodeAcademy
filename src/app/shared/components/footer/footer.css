@@ -1,6 +1,5 @@
 footer {
   font-family: 'ibm plex sans', sans-serif;
-  border: 2px solid blue;
   padding-top: 60px;
   padding-bottom: 20px;
   background: var(--primary-dark);

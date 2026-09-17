@@ -65,6 +65,10 @@ export const routes: Routes = [
         path: 'reviews',
         loadComponent: () => import('./pages/reviews/reviews').then((m) => m.Reviews),
       },
+      {
+        path: 'get-started',
+        loadComponent: () => import('./pages/get-started/get-started').then((m) => m.GetStarted),
+      },
     ],
   },
 

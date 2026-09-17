@@ -8,13 +8,14 @@ import { Programs } from '../programs/programs';
 import { LearningPaths } from '../learning-paths/learning-paths';
 import { Experience } from '../experience/experience';
 import { Reviews } from '../reviews/reviews';
+import { GetStarted } from '../get-started/get-started';
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [WhyUs, RouterLink, Programs, LearningPaths, Experience, Reviews],
+  imports: [ RouterLink, Programs, LearningPaths, Experience, Reviews, GetStarted],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
