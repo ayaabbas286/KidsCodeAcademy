@@ -21,7 +21,7 @@
   margin-left: 15px;
 }
 .review-card {
-  border: 2px solid rgb(243, 229, 255);
+  border: 1px solid rgba(190, 115, 255, 0.818);
   padding: 25px 15px;
   height: 230px;
   border-radius: 10px;
@@ -42,6 +42,7 @@
   text-overflow: ellipsis;
   line-height: 2;
   font-size: 14px;
+  color: black !important;
   margin-right: 20px;
   margin-bottom: 20px;
 }
@@ -58,8 +59,8 @@
   height: 40px;
 }
 @media (max-width: 767px) {
-.swiper-slide{
-  width: 90%;
-  margin: 6px;
-}
+  .swiper-slide {
+    width: 90%;
+    margin: 6px;
+  }
 }
