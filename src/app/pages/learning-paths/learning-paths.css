@@ -120,7 +120,7 @@
 @media (max-width: 767px) {
   .swiper-slide {
     width: 80% !important;
-    margin-right: 15px;
+    margin-right: 10px;
   }
   .title-container h6 {
     font-size: 18px;
