@@ -63,4 +63,7 @@
     width: 90%;
     margin: 6px;
   }
+  .main-content {
+    height: 440px;
+  }
 }

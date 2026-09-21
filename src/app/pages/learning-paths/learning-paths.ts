@@ -46,9 +46,9 @@ export class LearningPaths implements AfterViewInit {
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-        1280: { slidesPerView: 5 },
+        640: { slidesPerView: 1 },
+        1024: { slidesPerView: 2 },
+        1280: { slidesPerView: 4 },
       },
     });
   }
