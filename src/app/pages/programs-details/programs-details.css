@@ -1,0 +1,89 @@
+.main-content {
+  position: relative;
+  padding: 20px;
+  height: 410px;
+  background-color: var(--background);
+}
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+.circle1 {
+  width: 40px;
+  height: 40px;
+  left: 52%;
+  bottom: 75px;
+  background-color: #000dff;
+}
+
+.circle2 {
+  top: 38px;
+  right: 43%;
+
+  background-color: rgb(255, 247, 0);
+  opacity: 0.3;
+}
+.circle3 {
+  right: 95px;
+  bottom: 43px;
+  background-color: rgb(0 255 118);
+}
+.circle4 {
+  left: 9%;
+  bottom: 55px;
+  background-color: rgb(119, 0, 255);
+}
+.circle5 {
+  top: 77px;
+  right: 7%;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(248, 124, 124);
+  opacity: 0.5;
+}
+.circle6 {
+  width: 70px;
+  height: 70px;
+  top: 65px;
+  left: 50px;
+  background-color: rgb(0, 255, 204);
+}
+.circle7 {
+  width: 25px;
+  height: 25px;
+  top: 158px;
+  left: 16%;
+  background-color: rgb(255, 0, 0);
+}
+.img-container {
+  width: 50%;
+}
+.img-container img {
+  height: 360px;
+}
+.text-box {
+  width: 50%;
+}
+.text-box h3 {
+  font-size: 42px;
+  background-image: linear-gradient(to bottom , var(--primary), var(--primary-dark));
+  color: transparent;  
+  background-clip: text;
+  height: 55px;
+}
+.program-tabs {
+  margin-top: 20px;
+}
+.program-tab {
+  padding: 10px 20px;
+  width: 200px;
+  /* text-align: right; */
+  background-color: #eee;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  color: var(--primary-dark);
+  font-weight: 600;
+}

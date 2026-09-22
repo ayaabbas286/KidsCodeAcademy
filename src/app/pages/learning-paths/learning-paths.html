@@ -7,7 +7,7 @@
     <div class="swiper" #mySwiper dir="rtl">
       <div class="swiper-wrapper">
         @for (path of learningPaths; track path.id) {
-          <div class="swiper-slide" [ngClass]="path.classStyle">
+          <div class="swiper-slide" data-aos="zoom-in" [ngClass]="path.classStyle">
             <div class="path-card d-flex justify-center flex-column">
               <div class="title-container d-flex justify-start w-100">
                 <div class="icon-circle">

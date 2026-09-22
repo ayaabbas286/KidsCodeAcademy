@@ -3,7 +3,7 @@
     <h3 class="mb-2"><i class="bi bi-mortarboard-fill"></i> البرامج التعليمية</h3>
     <p>برامج تأسيسية متدرجة حسب العمر والمستوي لبناء أساس قوي في البرمجة</p>
   </div>
-  <div class="programs-cards-container row g-3">
+  <div class="programs-cards-container row g-3" data-aos="fade-left">
     @for (program of programs; track program.id) {
       <div class="col-12 col-md-6 col-lg-3">
         <div class="program-card card" [ngClass]="program.classStyle">
@@ -30,6 +30,8 @@
     }
   </div>
   <div class="all-programsBtn m-2">
-    <a class="btn">عرض جميع البرامج <i class="fa-solid fa-angles-left"></i> </a>
+    <a routerLink="/programs-details" class="btn"
+      >عرض جميع البرامج <i class="fa-solid fa-angles-left"></i>
+    </a>
   </div>
 </div>

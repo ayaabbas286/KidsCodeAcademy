@@ -1,0 +1,51 @@
+<div class="main-content">
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+  <div class="circle circle4"></div>
+  <div class="circle circle5"></div>
+  <div class="circle circle6"></div>
+  <div class="circle circle7"></div>
+  <div class="container">
+    <div class="d-flex justify-between align-center">
+      <div class="text-box text-left">
+        <h3>البرامج التعليمية</h3>
+        <p>اختاري البرنامج المناسب لعمر طفلك وابدئي رحلة ممتعة في عالم البرمجة</p>
+      </div>
+      <div class="img-container">
+        <img src="assets/images/programs-details/bg.png" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tabs container">
+  <div class="program-tabs d-flex justify-around">
+    <div class="active-pill" [style.--active-index]="activeProgram"></div>
+    @for (program of programs; track program.value; let i = $index) {
+      <button
+        type="button"
+        class="program-tab"
+        [class.active]="activeProgram === i"
+        (click)="selectProgram(i)"
+      >
+        <i
+          class="pi"
+          [ngClass]="{
+            'pi-th-large': i === 0,
+            'pi-user': i === 1,
+            'pi-star': i === 2,
+            'pi-trophy': i === 3,
+          }"
+        ></i>
+
+        <span>{{ program.title }}</span>
+
+        @if (i > 0) {
+          <small>
+            {{ i === 1 ? '5-8' : i === 2 ? '8-10' : i === 3 ? '10-13' : '13-16' }}
+          </small>
+        }
+      </button>
+    }
+  </div>
+</div>
