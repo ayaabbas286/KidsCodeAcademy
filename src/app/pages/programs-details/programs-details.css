@@ -90,6 +90,7 @@
   border-radius: 20px;
   color: var(--primary-dark);
   font-weight: 700;
+  transition: color 0.3s ease;
 }
 .active-pill {
   position: absolute;
