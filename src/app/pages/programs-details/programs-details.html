@@ -24,7 +24,7 @@
     @for (program of programs; track program.value; let i = $index) {
       <button
         type="button"
-         #tabBtn
+        #tabBtn
         class="program-tab"
         [class.active]="activeProgram === i"
         (click)="selectProgram(i)"
@@ -36,6 +36,7 @@
             'pi-user': i === 1,
             'pi-star': i === 2,
             'pi-trophy': i === 3,
+            'pi-sparkles': i === 4,
           }"
         ></i>
 
