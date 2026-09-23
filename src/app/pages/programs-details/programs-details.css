@@ -76,12 +76,13 @@
 }
 .program-tabs {
   position: relative;
+  display: flex;
+  gap: 12px;
   margin-top: 20px;
 }
 .program-tab {
   position: relative;
   z-index: 1;
-
   padding: 10px 20px;
   width: 200px;
   background-color: #eee;
@@ -92,13 +93,14 @@
 }
 .active-pill {
   position: absolute;
-  right: 30px;
   top: 0;
-  width: 200px;
+  left: 0;
   height: 100%;
   border-radius: 20px;
   background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
-  transform: translatex(calc(var(--active-index) * -129%));
+  transition:
+    transform 0.3s ease,
+    width 0.3s ease;
   z-index: 0;
 }
 .program-tab.active {

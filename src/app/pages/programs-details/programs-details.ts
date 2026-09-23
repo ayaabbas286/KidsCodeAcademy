@@ -1,14 +1,19 @@
-import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { NgClass, NgStyle } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-programs-details',
-  imports: [NgClass],
+  imports: [NgClass, NgStyle],
   templateUrl: './programs-details.html',
   styleUrl: './programs-details.css',
 })
-export class ProgramsDetails {
+export class ProgramsDetails implements AfterViewInit {
+  @ViewChildren('tabBtn') tabButtons!: QueryList<ElementRef>;
   activeProgram = 0;
+  pillStyle: { width: string; transform: string } = { width: '0px', transform: 'translateX(0)' };
+  ngAfterViewInit(): void {
+    setTimeout(() => this.updatePillPosition(), 0);
+  }
   programs = [
     {
       title: 'كل البرامج',
@@ -37,5 +42,16 @@ export class ProgramsDetails {
   ];
   selectProgram(index: number) {
     this.activeProgram = index;
+    this.updatePillPosition();
+  }
+  private updatePillPosition() {
+    const buttons = this.tabButtons.toArray();
+    const activeBtn = buttons[this.activeProgram]?.nativeElement as HTMLElement;
+    if (activeBtn) {
+      this.pillStyle = {
+        width: `${activeBtn.offsetWidth}px`,
+        transform: `translateX(${activeBtn.offsetLeft}px)`,
+      };
+    }
   }
 }

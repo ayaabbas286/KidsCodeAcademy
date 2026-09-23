@@ -20,10 +20,11 @@
 </div>
 <div class="tabs container">
   <div class="program-tabs d-flex justify-around">
-    <div class="active-pill" [style.--active-index]="activeProgram"></div>
+    <div class="active-pill" [ngStyle]="pillStyle"></div>
     @for (program of programs; track program.value; let i = $index) {
       <button
         type="button"
+         #tabBtn
         class="program-tab"
         [class.active]="activeProgram === i"
         (click)="selectProgram(i)"
