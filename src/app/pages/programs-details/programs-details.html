@@ -40,10 +40,8 @@
 
         <span>{{ program.title }}</span>
 
-        @if (i > 0) {
-          <small>
-            {{ i === 1 ? '5-8' : i === 2 ? '8-10' : i === 3 ? '10-13' : '13-16' }}
-          </small>
+        @if (program.ageRange) {
+          <small> {{ program.ageRange }} </small>
         }
       </button>
     }

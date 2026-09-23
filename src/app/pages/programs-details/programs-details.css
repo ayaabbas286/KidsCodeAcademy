@@ -69,21 +69,40 @@
 }
 .text-box h3 {
   font-size: 42px;
-  background-image: linear-gradient(to bottom , var(--primary), var(--primary-dark));
-  color: transparent;  
+  background-image: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+  color: transparent;
   background-clip: text;
   height: 55px;
 }
 .program-tabs {
+  position: relative;
   margin-top: 20px;
 }
 .program-tab {
+  position: relative;
+  z-index: 1;
+
   padding: 10px 20px;
   width: 200px;
-  /* text-align: right; */
   background-color: #eee;
   border: 1px solid #eee;
   border-radius: 20px;
   color: var(--primary-dark);
-  font-weight: 600;
+  font-weight: 700;
+}
+.active-pill {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+  transform: translatex(calc(var(--active-index) * -129%));
+  z-index: 0;
+}
+.program-tab.active {
+  color: #fff;
+  border: 1px solid var(--primary-dark);
+  background-color: transparent;
 }

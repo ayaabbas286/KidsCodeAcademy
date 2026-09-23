@@ -17,18 +17,22 @@ export class ProgramsDetails {
     {
       title: 'المستكشف الصغير',
       value: 'little',
+      ageRange: '5-8',
     },
     {
       title: 'المبرمج المبتدئ',
       value: 'beginner',
+      ageRange: '8-10',
     },
     {
       title: 'المبرمج المبدع',
       value: 'creative',
+      ageRange: '10-13',
     },
     {
       title: 'المبرمج المحترف',
       value: 'advanced',
+      ageRange: '13-16',
     },
   ];
   selectProgram(index: number) {
