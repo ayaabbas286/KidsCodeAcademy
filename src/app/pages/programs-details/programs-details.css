@@ -81,6 +81,10 @@
   margin-top: 20px;
 }
 .program-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   position: relative;
   z-index: 1;
   padding: 10px;
@@ -108,4 +112,7 @@
   color: #fff;
   border: 1px solid var(--primary-dark);
   background-color: transparent;
+}
+.program-tab i.pi {
+  font-size: 16px;
 }
