@@ -20,32 +20,71 @@
 </div>
 <div class="tabs container">
   <div class="program-tabs d-flex justify-around">
-    <div class="active-pill" [ngStyle]="pillStyle"></div>
-    @for (program of programs; track program.value; let i = $index) {
+    @for (tab of tabs; track tab.value) {
       <button
         type="button"
-        #tabBtn
         class="program-tab"
-        [class.active]="activeProgram === i"
-        (click)="selectProgram(i)"
+        [class.active]="activeFilter() === tab.value"
+        (click)="selectProgram(tab.value)"
       >
-        <i
-          class="pi"
-          [ngClass]="{
-            'pi-th-large': i === 0,
-            'pi-user': i === 1,
-            'pi-star': i === 2,
-            'pi-trophy': i === 3,
-            'pi-sparkles': i === 4,
-          }"
-        ></i>
-
-        <span>{{ program.title }}</span>
-
-        @if (program.ageRange) {
-          <small> {{ program.ageRange }} </small>
+        <i class="pi" [ngClass]="tab.icon"></i>
+        <span>{{ tab.title }}</span>
+        @if (tab.ageRange) {
+          <small>{{ tab.ageRange }}</small>
         }
       </button>
     }
   </div>
 </div>
+<div class="discover-programs">
+  <div class="sub-text-box d-flex justify-center align-center text-center m-5">
+    <div class="f-line"></div>
+    <h3>اكتشف برامجنا</h3>
+    <div class="l-line"></div>
+  </div>
+  <div class="programs-cards container">
+    @for (program of filteredPrograms(); track program.value) {
+      <div class="program-card p-4" [ngClass]="program.theme">
+        <div class="content d-flex justify-between align-center">
+          <div class="img-container d-flex justify-center align-center">
+            <img [src]="program.image" [alt]="program.title" />
+          </div>
+          <div class="card-body">
+            <div class="de-flex justify-between align-center mb-3">
+              <h4>{{ program.title }}</h4>
+              <p class="age-badge">
+                {{ program.ageLabel }}
+              </p>
+            </div>
+
+            <p class="program-description">{{ program.description }}</p>
+
+            <ul class="features">
+              @for (feature of program.features; track feature) {
+                <li><i class="pi pi-check"></i> {{ feature }}</li>
+              }
+            </ul>
+
+            <div class="stats d-flex justify-between align-center mt-4">
+              <div class="projects-count">
+                <p>
+                  عدد المشاريع <span>{{ program.projectsCount }} </span>
+                </p>
+              </div>
+
+              <div class="duration">
+                <p>
+                  مدة البرنامج <span>{{ program.duration }}</span>
+                </p>
+              </div>
+              <button type="button" class="view-btn">
+                عرض البرنامج <i class="pi pi-arrow-left"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+<app-learning-paths></app-learning-paths>
