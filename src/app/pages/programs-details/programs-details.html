@@ -19,6 +19,11 @@
   </div>
 </div>
 <div class="tabs container">
+  <div class="sub-text-box d-flex justify-center align-center text-center m-5">
+    <div class="f-line"></div>
+    <h3>اكتشف برامجنا</h3>
+    <div class="l-line"></div>
+  </div>
   <div class="program-tabs d-flex justify-around">
     @for (tab of tabs; track tab.value) {
       <button
@@ -37,11 +42,6 @@
   </div>
 </div>
 <div class="discover-programs">
-  <div class="sub-text-box d-flex justify-center align-center text-center m-5">
-    <div class="f-line"></div>
-    <h3>اكتشف برامجنا</h3>
-    <div class="l-line"></div>
-  </div>
   <div class="programs-cards container">
     @for (program of filteredPrograms(); track program.value) {
       <div class="program-card p-4" [ngClass]="program.theme">
