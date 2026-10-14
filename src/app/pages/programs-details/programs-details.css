@@ -355,11 +355,98 @@
   padding: 3px 8px;
   border-radius: 8px;
 }
-
-@media (max-width: 768px) {
+@media (min-width: 1201px) {
+  .img-container img {
+    height: 350px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .main-content {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-container img {
+    height: 300px;
+  }
+  .circle4 {
+    width: 50px;
+    height: 50px;
+    left: 3%;
+    bottom: 20px;
+  }
+  .circle5 {
+    width: 40px;
+    height: 40px;
+    left: 5%;
+    top: 40px;
+  }
+  .circle7 {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-content {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-container img {
+    height: 200px;
+  }
+  .circle1 {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+  }
+  .circle2 {
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 40%;
+  }
+  .circle3 {
+    width: 30px;
+    height: 30px;
+    right: 80px;
+    bottom: 10px;
+  }
+  .circle4 {
+    width: 30px;
+    height: 30px;
+    left: 5%;
+    bottom: 40px;
+  }
+  .circle5 {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 2%;
+  }
+  .circle6 {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 30px;
+  }
+  .circle7 {
+    display: none;
+  }
+    .program-tabs .program-tab {
+    width: 100%;
+    padding: 10px 6px;
+  
+    gap:6px ;
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
   .main-content .container > div {
     flex-direction: column;
     height: auto;
+    padding-top: 20px;
   }
   .img-container,
   .text-box {
@@ -380,10 +467,18 @@
     display: none;
   }
   .program-tabs {
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px ;
+    justify-items: stretch;
+    padding: 0 10px;
+  }
+  .program-tabs .program-tab {
+    width: 100%;
+    padding: 10px 6px;
+  
+    gap:6px ;
+    font-size: 12px;
   }
   .program-card .content {
     display: flex;
@@ -403,4 +498,5 @@
     width: 100%;
     height: auto;
   }
+
 }
