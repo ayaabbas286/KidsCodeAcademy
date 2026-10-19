@@ -355,12 +355,8 @@
   padding: 3px 8px;
   border-radius: 8px;
 }
-@media (min-width: 1201px) {
-  .img-container img {
-    height: 350px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
+
+@media (min-width: 1200px) {
   .main-content {
     height: 350px;
     display: flex;
@@ -386,9 +382,73 @@
     display: none;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .main-content {
     height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-container img {
+    height: 300px;
+  }
+  .program-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .program-tabs .program-tab {
+    gap: 5px;
+    font-size: 14px !important  ;
+  }
+  .circle1 {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+  }
+  .circle2 {
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 40%;
+  }
+  .circle3 {
+    width: 30px;
+    height: 30px;
+    right: 80px;
+    bottom: 10px;
+  }
+  .circle4 {
+    width: 30px;
+    height: 30px;
+    left: 5%;
+    bottom: 40px;
+  }
+  .circle5 {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 2%;
+  }
+  .circle6 {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 30px;
+  }
+  .circle7 {
+    display: none;
+  }
+  .program-tabs .program-tab {
+    width: 250px;
+    /* padding: 8px 10px; */
+    gap: 5px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-content {
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -434,18 +494,24 @@
   .circle7 {
     display: none;
   }
-    .program-tabs .program-tab {
-    width: 100%;
-    padding: 10px 6px;
-  
-    gap:6px ;
-    font-size: 12px;
+  .program-tabs .program-tab {
+    width: 200px;
+    padding: 6px 2px;
+    gap: 5px;
+    font-size: 10px !important;
+  }
+  .program-card {
+    padding: 10px 10px !important;
+    margin: 15px 0px;
   }
 }
 @media (max-width: 767px) {
+  .main-content {
+    height: 460px;
+  }
   .main-content .container > div {
     flex-direction: column;
-    height: auto;
+    height: 390px;
     padding-top: 20px;
   }
   .img-container,
@@ -466,18 +532,22 @@
   .circle {
     display: none;
   }
+  .program-tab {
+    width: auto;
+    padding: 0px;
+  }
   .program-tabs {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
-    gap:10px ;
+    gap: 10px;
     justify-items: stretch;
     padding: 0 10px;
   }
   .program-tabs .program-tab {
     width: 100%;
     padding: 10px 6px;
-  
-    gap:6px ;
+
+    gap: 6px;
     font-size: 12px;
   }
   .program-card .content {
@@ -498,5 +568,4 @@
     width: 100%;
     height: auto;
   }
-
 }
