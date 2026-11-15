@@ -1,1 +1,65 @@
-<p>login works!</p>
+<section class="login-page">
+  <div class="container login-wrapper">
+    <div class="login-card">
+      <div class="avatar"><i class="pi pi-user"></i></div>
+      <h3>تسجيل الدخول</h3>
+      <p class="subtitle">سجل دخولك وكمل رحلتك في عالم البرمجة</p>
+
+      <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <label class="field-label" for="email">البريد الإلكتروني</label>
+        <div class="input-box" [class.invalid]="invalid('email')">
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            placeholder="أدخل بريدك الإلكتروني"
+          />
+          <i class="pi pi-envelope icon"></i>
+        </div>
+        @if (invalid('email')) {
+          <small class="error">البريد الإلكتروني غير صحيح</small>
+        }
+        <label class="field-label" for="password">كلمة المرور</label>
+        <div class="input-box" [class.invalid]="invalid('password')">
+          <input
+            [type]="showPassword() ? 'text' : 'password'"
+            id="password"
+            formControlName="password"
+            placeholder="أدخل كلمة المرور"
+          />
+          <button type="button" class="icon toggle" (click)="showPassword.set(!showPassword())">
+            <i
+              class="pi"
+              [class.pi-eye]="!showPassword()"
+              [class.pi-eye-slash]="showPassword()"
+            ></i>
+          </button>
+        </div>
+        @if (invalid('password')) {
+          <small class="error">اكتب كلمة المرور</small>
+        }
+        <div class="options">
+          <label class="remember">
+            <input type="checkbox" formControlName="remember" />
+            تذكرني
+          </label>
+          <a routerLink="/forgot-password" class="forgot">نسيت كلمة المرور؟</a>
+        </div>
+        <button type="submit" class="submit-btn">
+          تسجيل الدخول <i class="pi pi-arrow-left"></i>
+        </button>
+        <div class="divider"><span>أو</span></div>
+
+        <button type="button" class="google-btn">
+          تسجيل الدخول بواسطة جوجل <i class="pi pi-google"></i>
+        </button>
+
+        <p class="register-link">ليس لديك حساب؟ <a routerLink="/register">إنشاء حساب</a></p>
+      </form>
+    </div>
+
+    <div class="login-img">
+      <img src="assets/images/auth/login.png" alt="أهلاً بعودتك " />
+    </div>
+  </div>
+</section>

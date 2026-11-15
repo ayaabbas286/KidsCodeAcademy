@@ -1,0 +1,98 @@
+@if (program) {
+  <div class="main-content">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="circle circle5"></div>
+    <div class="circle circle6"></div>
+    <div class="circle circle7"></div>
+    <div class="position-absolute breadcrumb-nav">
+      <app-breadcrumb [items]="breadcrumbItems"></app-breadcrumb>
+    </div>
+
+    <div class="container">
+      <div class="hero-content d-flex justify-between align-center">
+        <div class="text-box text-left">
+          <p class="ageLabel"><i class="pi {{ program.icon }} mx-1"></i>{{ program.ageLabel }}</p>
+          <h3>{{ program.title }}</h3>
+          <div class="hero-text">
+            <p>{{ program.description }}</p>
+
+            <div class="hero-stats">
+              <!-- Duration -->
+              <div>
+                <strong>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="4" width="18" height="17" rx="2" />
+                    <path d="M16 2v4M8 2v4M3 10h18" />
+                  </svg>
+                  <span>مدة البرنامج</span>
+                </strong>
+                <p>{{ program.duration }}</p>
+              </div>
+
+              <!-- Projects -->
+              <div>
+                <strong>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-mortarboard"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"
+                    />
+                    <path
+                      d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"
+                    />
+                  </svg>
+                  <span>عدد المشاريع</span>
+                </strong>
+
+                <p>{{ program.projectsCount }}</p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="subscribe-btn btn-main"
+            routerLink="/register"
+            [queryParams]="{ program: program.value }"
+          >
+            اشترك الآن <i class="pi pi-arrow-left"></i>
+          </a>
+        </div>
+        <div class="img-container">
+          <img [src]="program.image" [alt]="program.title" />
+        </div>
+      </div>
+    </div>
+
+    <section class="detail-hero container" [ngClass]="program.theme"></section>
+  </div>
+
+  <section class="detail-features container shadow p-4">
+    <div class="d-flex justify-between align-center">
+    <div>
+      <h3>إيه اللي هيتعلمه طفلك؟</h3>
+      <ul>
+        @for (feature of program.features; track feature) {
+          <li>{{ feature }}</li>
+        }
+      </ul>
+    </div>
+    <div class="img-container"><img [src]="program.featuresImage" [alt]="program.title" /></div></div>
+  </section>
+}

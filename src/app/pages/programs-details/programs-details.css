@@ -183,11 +183,18 @@
 .blue .pi-check {
   font-weight: 600;
 }
+.breadcrumb-nav {
+  top: 0;
+  right: 0;
+}
 .view-btn {
   margin-top: -17px;
   border-radius: 10px;
   padding: 7px 15px;
   border: none;
+
+  display: inline-block;
+  text-decoration: none;
 }
 .blue .view-btn {
   background-color: rgb(49, 0, 147);
@@ -363,9 +370,7 @@
     justify-content: center;
     align-items: center;
   }
-  .img-container img {
-    height: 300px;
-  }
+
   .circle4 {
     width: 50px;
     height: 50px;
@@ -507,7 +512,7 @@
 }
 @media (max-width: 767px) {
   .main-content {
-    height: 45  0px;
+    height: 45 0px;
     padding: 10px;
   }
   .main-content .container > div {
@@ -518,7 +523,8 @@
   .img-container,
   .text-box {
     text-align: center;
-    width: 100%; }
+    width: 100%;
+  }
   .text-box h3 {
     margin-top: 25px;
     font-size: 32px;

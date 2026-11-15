@@ -1,1 +1,114 @@
-<p>register works!</p>
+<section class="register-page">
+  <div class="container register-wrapper">
+    <div class="register-card">
+      <div class="avatar"><i class="pi pi-user"></i></div>
+      <h3>إنشاء حساب جديد</h3>
+      <p class="subtitle">انضم إلى أكاديمية كيدز كود وابدأ رحلتك في عالم البرمجة</p>
+
+      <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <span class="field-label">أنا أريد التسجيل كـ</span>
+        <div class="roles">
+          @for (r of roles; track r.value) {
+            <button
+              type="button"
+              class="role-btn"
+              [class.active]="form.controls.role.value === r.value"
+              (click)="selectRole(r.value)"
+            >
+              <i class="pi {{ r.icon }}"></i>
+              <span>{{ r.label }}</span>
+            </button>
+          }
+        </div>
+        <label class="field-label" for="fullName">الاسم الكامل</label>
+        <div class="input-box" [class.invalid]="invalid('fullName')">
+          <input
+            id="fullName"
+            type="text"
+            formControlName="fullName"
+            placeholder="أدخل اسمك الكامل"
+          />
+          <i class="pi pi-user icon"></i>
+        </div>
+        @if (invalid('fullName')) {
+          <small class="error">اكتب اسمك (3 حروف على الأقل)</small>s
+        }
+        <label class="field-label" for="email">البريد الإلكتروني</label>
+        <div class="input-box" [class.invalid]="invalid('email')">
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            placeholder="أدخل بريدك الإلكتروني"
+          />
+          <i class="pi pi-envelope icon"></i>
+        </div>
+        @if (invalid('email')) {
+          <small class="error">البريد الإلكتروني غير صحيح</small>
+        }
+        <label class="field-label" for="password">كلمة المرور</label>
+        <div class="input-box" [class.invalid]="invalid('password')">
+          <input
+            [type]="showPassword() ? 'text' : 'password'"
+            id="password"
+            formControlName="password"
+            placeholder="أدخل كلمة المرور"
+          />
+          <button type="button" class="icon toggle" (click)="showPassword.set(!showPassword())">
+            <i
+              class="pi"
+              [class.pi-eye]="!showPassword()"
+              [class.pi-eye-slash]="showPassword()"
+            ></i>
+          </button>
+        </div>
+        @if (invalid('password')) {
+          <small class="error">كلمة المرور 8 حروف على الأقل</small>
+        }
+
+        <label class="field-label" for="confirmPassword">تأكيد كلمة المرور</label>
+        <div
+          class="input-box"
+          [class.invalid]="
+            invalid('confirmPassword') ||
+            (form.controls.confirmPassword.touched && form.hasError('mismatch'))
+          "
+        >
+          <input
+            id="confirmPassword"
+            [type]="showConfirm() ? 'text' : 'password'"
+            formControlName="confirmPassword"
+            placeholder="أعد إدخال كلمة المرور"
+          />
+          <button type="button" class="icon toggle" (click)="showConfirm.set(!showConfirm())">
+            <i class="pi" [class.pi-eye]="!showConfirm()" [class.pi-eye-slash]="showConfirm()"></i>
+          </button>
+        </div>
+        @if (form.controls.confirmPassword.touched && form.hasError('mismatch')) {
+          <small class="error">كلمتا المرور غير متطابقتين</small>
+        }
+        <button type="submit" class="submit-btn">
+          إنشاء الحساب <i class="pi pi-arrow-left"></i>
+        </button>
+
+        <p class="terms">
+          بإنشاء حسابك، فإنك توافق على
+          <a routerLink="/terms">شروط الاستخدام</a> و
+          <a routerLink="/privacy-policy">سياسة الخصوصية</a>
+        </p>
+
+        <div class="divider"><span>أو</span></div>
+
+        <button type="button" class="google-btn">
+          التسجيل بواسطة جوجل <i class="pi pi-google"></i>
+        </button>
+
+        <p class="login-link">لديك حساب بالفعل؟ <a routerLink="/login">تسجيل الدخول</a></p>
+      </form>
+    </div>
+
+    <div class="register-img">
+      <img src="assets/images/auth/register.png" alt="معاً نبني جيل المبدعين" />
+    </div>
+  </div>
+</section>

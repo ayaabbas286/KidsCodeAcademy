@@ -1,0 +1,60 @@
+<div class="hero-section">
+  <div class="hero-bg">
+    <span class="floating-shape shape-1"></span>
+    <span class="floating-shape shape-2"></span>
+    <span class="floating-shape shape-3"></span>
+    <span class="floating-shape shape-4"></span>
+    <span class="floating-shape shape-5"></span>
+    <span class="floating-shape shape-6"></span>
+  </div>
+  <div class="hero-container container row m-auto">
+    <div class="hero-inner col-12 col-md-12 col-lg-6">
+      <div class="hero-text">
+        <div class="hero-title">
+          <p class="hero-badge">
+            <i class="bi bi-star-fill"></i>
+            احجز حصتك التجريبية المجانية الآن
+          </p>
+          <h1 class="hero-line">
+            احجز حصة تجريبية
+            <span>مجانية</span>
+          </h1>
+        </div>
+        <p class="hero-desc">
+          دع طفلك يكتشف عالم البرمجة من خلال حصة تجريبية مجانية مع أفضل المدربين في أكاديمية كيدز
+          كود.
+        </p>
+      </div>
+    </div>
+    <div class="hero-robot col-12 col-md-12 col-lg-6">
+      <img class="img-fluid" src="/assets/images/free-trial/banner.png" alt="hero-banner" />
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="title-txt p-3 mb-2">
+    <h3 class="mb-2"><i class="bi bi-mortarboard-fill"></i>ماذا ستحصل عليه ؟</h3>
+    <p>في الحصة التجريبية سيستمتع بطفلك بـ :</p>
+  </div>
+  <div class="programs-cards-container row g-3" data-aos="fade-down" data-aos-duration="1000">
+    @for (program of programs; track program.id) {
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="program-card card" [ngClass]="program.classStyle">
+          <div class="card-icon"><i [class]="program.icon"></i></div>
+          <div class="program-card-body">
+            <h5 class="program-card-title mb-3">{{ program.title }}</h5>
+
+            <p class="program-card-description">
+              {{ program.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- registrtaion form -->
+   <app-trial-form>
+
+   </app-trial-form>
+</div>

@@ -1,0 +1,246 @@
+
+/* ================= TRIAL CONTAINER ================= */
+
+.main-container {
+  padding: 30px;
+  border: 2px solid #e4dcff;
+  border-radius: 30px;
+  background: linear-gradient(120deg, #f0f2ff 0%, #ffffff 55%);
+  box-shadow: 0 5px 25px rgba(91, 95, 238, 0.06);
+}
+
+.trial-layout {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 35px;
+}
+
+/* ================= FORM ================= */
+
+.form-container {
+  flex: 1;
+  min-width: 0;
+  padding: 15px;
+}
+
+.form-header {
+  position: relative;
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.form-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  background: #f0ebff;
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-header h3 {
+  color: var(--text-dark);
+  font-family: 'Alexandria', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.form-header p {
+  color: var(--text-light);
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* ================= FORM FIELDS ================= */
+
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-group > i {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: var(--primary);
+  font-size: 19px;
+  pointer-events: none;
+}
+
+.form-control,
+.form-select {
+  width: 100%;
+  min-height: 55px;
+  padding: 12px 48px 12px 15px;
+  border: 2px solid #e5ddff;
+  border-radius: 13px;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 14px;
+  text-align: right;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: #777b98;
+  opacity: 1;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(91, 95, 238, 0.1);
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: #ef4444;
+  background-image: none;
+}
+
+.error-message {
+  display: block;
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 5px;
+  padding-right: 5px;
+}
+
+/* Textarea */
+
+.textarea-group {
+  align-items: flex-start;
+}
+
+.textarea-group > i {
+  top: 18px;
+  transform: none;
+}
+
+.textarea-group textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+
+.submit-btn {
+  width: 100%;
+  min-height: 58px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(
+    120deg,
+    var(--primary-dark),
+    #7253bb
+  );
+  color: #fff;
+  font-family: 'Alexandria', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(71, 76, 207, 0.25);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submit-btn i {
+  margin-right: 8px;
+}
+
+/* ================= IMAGE ================= */
+
+.trial-image {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trial-image img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+  .trial-layout {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .trial-image {
+    width: 100%;
+    max-width: 450px;
+    order: 2;
+  }
+
+  .trial-image img {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 575px) {
+  .main-container {
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .form-container {
+    padding: 5px;
+  }
+
+  .form-header h3 {
+    font-size: 1.35rem;
+  }
+
+  .form-header p {
+    font-size: 13px;
+  }
+
+  .form-control,
+  .form-select {
+    min-height: 50px;
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    min-height: 52px;
+    font-size: 15px;
+  }
+
+  .trial-image img {
+    max-height: 280px;
+  }
+}

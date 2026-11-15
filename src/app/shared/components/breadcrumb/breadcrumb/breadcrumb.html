@@ -1,0 +1,24 @@
+<nav aria-label="breadcrumb" dir="rtl">
+  <ol class="breadcrumb-list">
+    <li class="breadcrumb-item">
+      <a routerLink="/" aria-label="الرئيسية">
+        <i class="bi bi-house-fill"></i>
+        الرئيسية
+      </a>
+    </li>
+
+    @for (item of items; track $index; let last = $last) {
+      <li class="breadcrumb-item">
+        @if (!last && item.route) {
+          <a [routerLink]="item.route">
+            {{ item.label }}
+          </a>
+        } @else {
+          <span class="current-page" aria-current="page">
+            {{ item.label }}
+          </span>
+        }
+      </li>
+    }
+  </ol>
+</nav>

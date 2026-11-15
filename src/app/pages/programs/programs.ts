@@ -18,11 +18,17 @@ export interface program {
 @Component({
   selector: 'app-programs',
   standalone: true,
-  imports: [RouterLink, NgClass],
+  imports: [RouterLink, NgClass ],
   templateUrl: './programs.html',
   styleUrl: './programs.css',
 })
 export class Programs {
+   breadcrumbs = [
+    {
+      label: 'البرامج التعليمية',
+      route: '/programs',
+    }
+  ];
   programs: program[] = [
     {
       id: 1,

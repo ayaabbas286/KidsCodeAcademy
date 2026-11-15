@@ -6,7 +6,12 @@
   <div class="circle circle5"></div>
   <div class="circle circle6"></div>
   <div class="circle circle7"></div>
+  <div class="position-absolute breadcrumb-nav">
+    <app-breadcrumb [items]="breadcrumbItems"></app-breadcrumb>
+  </div>
+
   <div class="container">
+    25
     <div class="d-flex justify-between align-center">
       <div class="text-box text-left">
         <h3>البرامج التعليمية</h3>
@@ -77,9 +82,10 @@
                   مدة البرنامج <span>{{ program.duration }}</span>
                 </p>
               </div>
-              <button type="button" class="view-btn">
-                عرض البرنامج <i class="pi pi-arrow-left"></i>
-              </button>
+              <a class="view-btn" [routerLink]="['/programs-details', program.value]">
+                اشترك الآن
+                <i class="pi pi-arrow-left"></i>
+              </a>
             </div>
           </div>
         </div>

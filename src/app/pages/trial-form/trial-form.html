@@ -1,0 +1,187 @@
+
+<div class="main-container container my-5">
+  <div class="trial-layout">
+
+    <!-- Trial Booking Form -->
+    <div class="form-container">
+
+      <div class="form-header">
+        <span class="form-badge">
+          <i class="bi bi-stars"></i>
+          خطوتك الأولى نحو عالم البرمجة
+        </span>
+
+        <h3>احجز الآن حصتك التجريبية المجانية</h3>
+
+        <p>
+          املأ البيانات التالية وسنقوم بالتواصل معك في أقرب وقت
+        </p>
+      </div>
+
+      <form [formGroup]="trialForm" (ngSubmit)="onSubmit()" novalidate>
+
+        <div class="row g-3">
+
+          <!-- Full Name -->
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <i class="bi bi-person"></i>
+
+              <input
+                type="text"
+                class="form-control"
+                formControlName="fullName"
+                placeholder="الاسم الكامل *"
+                [class.is-invalid]="isInvalid('fullName')"
+              />
+            </div>
+
+            @if (isInvalid('fullName')) {
+              <small class="error-message">
+                @if (trialForm.controls.fullName.hasError('required')) {
+                  الاسم الكامل مطلوب
+                } @else {
+                  يجب إدخال 3 أحرف على الأقل
+                }
+              </small>
+            }
+          </div>
+
+          <!-- Phone Number -->
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <i class="bi bi-telephone"></i>
+
+              <input
+                type="tel"
+                class="form-control"
+                formControlName="phoneNumber"
+                placeholder="رقم الهاتف *"
+                dir="rtl"
+                [class.is-invalid]="isInvalid('phoneNumber')"
+              />
+            </div>
+
+            @if (isInvalid('phoneNumber')) {
+              <small class="error-message">
+                @if (trialForm.controls.phoneNumber.hasError('required')) {
+                  رقم الهاتف مطلوب
+                } @else {
+                  أدخل رقم هاتف مصري صحيح
+                }
+              </small>
+            }
+          </div>
+
+          <!-- Child Age -->
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <i class="bi bi-people"></i>
+
+              <input
+                type="number"
+                class="form-control"
+                formControlName="childAge"
+                placeholder="عمر الطفل *"
+                min="5"
+                max="18"
+                [class.is-invalid]="isInvalid('childAge')"
+              />
+            </div>
+
+            @if (isInvalid('childAge')) {
+              <small class="error-message">
+                عمر الطفل يجب أن يكون بين 5 و18 سنة
+              </small>
+            }
+          </div>
+
+          <!-- Program -->
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <i class="bi bi-person-workspace"></i>
+
+              <select
+                class="form-select"
+                formControlName="program"
+                [class.is-invalid]="isInvalid('program')"
+              >
+                <option value="" disabled>اختر البرنامج المناسب *</option>
+                <option value="explorer">المستكشف الصغير</option>
+                <option value="beginner">المبرمج المبتدئ</option>
+                <option value="inventor">المبرمج المبدع</option>
+                <option value="expert">المبرمج المحترف</option>
+                <option value="not-sure">لست متأكداً - ساعدوني في الاختيار</option>
+              </select>
+            </div>
+
+            @if (isInvalid('program')) {
+              <small class="error-message">
+                يرجى اختيار البرنامج المناسب
+              </small>
+            }
+          </div>
+
+          <!-- Additional Notes -->
+          <div class="col-12">
+            <div class="form-group textarea-group">
+              <i class="bi bi-chat-square-dots"></i>
+
+              <textarea
+                class="form-control"
+                formControlName="notes"
+                placeholder="أي ملاحظات إضافية (اختياري)"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="col-12">
+            <button
+              type="submit"
+              class="submit-btn"
+              [disabled]="isSubmitting"
+            >
+              @if (isSubmitting) {
+                <span class="spinner-border spinner-border-sm"></span>
+                جاري إرسال طلبك...
+              } @else {
+                احجز الآن
+                <i class="bi bi-send-fill"></i>
+              }
+            </button>
+          </div>
+
+        </div>
+      </form>
+
+      <!-- Success Message -->
+      @if (successMessage) {
+        <div class="alert alert-success mt-3">
+          <i class="bi bi-check-circle-fill"></i>
+          {{ successMessage }}
+        </div>
+      }
+
+      <!-- Error Message -->
+      @if (errorMessage) {
+        <div class="alert alert-danger mt-3">
+          <i class="bi bi-exclamation-circle-fill"></i>
+          {{ errorMessage }}
+        </div>
+      }
+
+    </div>
+
+    <!-- Illustration -->
+    <div class="trial-image">
+      <img
+        src="/assets/images/free-trial/form-photo.png"
+        alt="طفلة تتعلم البرمجة"
+        class="img-fluid"
+      />
+    </div>
+
+  </div>
+</div>

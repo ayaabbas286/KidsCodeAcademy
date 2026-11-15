@@ -19,9 +19,23 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/programs/programs').then((m) => m.Programs),
       },
       {
-        path: 'LearningPaths',
-        loadComponent: () =>
-          import('./pages/learning-paths/learning-paths').then((m) => m.LearningPaths),
+        path: 'paths',
+        data: {
+          breadcrumb: 'المسارات التعليمية',
+        },
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import('./pages/learning-paths/learning-paths').then((m) => m.LearningPaths),
+          },
+
+          {
+            path: ':slug',
+            loadComponent: () =>
+              import('./pages/learning-paths/learning-paths').then((m) => m.LearningPaths),
+          },
+        ],
       },
       {
         path: 'courses-levels',
@@ -43,6 +57,19 @@ export const routes: Routes = [
       {
         path: 'register',
         loadComponent: () => import('./features/auth/register/register').then((m) => m.Register),
+      },
+      {
+        path: 'forgot-password',
+        loadComponent: () =>
+          import('./features/auth/forgot-password/forgot-password').then((m) => m.ForgotPassword),
+      },
+      {
+        path: 'free-trial',
+        loadComponent: () => import('./pages/free-trial/free-trial').then((m) => m.FreeTrial),
+      },
+      {
+        path: 'trial-form',
+        loadComponent: () => import('./pages/trial-form/trial-form').then((m) => m.TrialForm),
       },
       {
         path: 'projects',
@@ -71,8 +98,22 @@ export const routes: Routes = [
       },
       {
         path: 'programs-details',
-        loadComponent: () =>
-          import('./pages/programs-details/programs-details').then((m) => m.ProgramsDetails),
+        data: {
+          breadcrumb: 'البرامج التعليمية',
+        },
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import('./pages/programs-details/programs-details').then((m) => m.ProgramsDetails),
+          },
+
+          {
+            path: ':slug',
+            loadComponent: () =>
+              import('./pages/program-details/program-details').then((m) => m.ProgramDetails),
+          },
+        ],
       },
     ],
   },
