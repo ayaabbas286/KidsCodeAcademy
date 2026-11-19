@@ -1,5 +1,8 @@
 :host {
   display: block;
+  position: relative;
+  z-index: 100;
+  width: 100%;
 }
 
 .breadcrumb-list {
@@ -11,11 +14,12 @@
 
   list-style: none;
   padding: 0;
-  margin: 0;
-  margin-top: 10px;
-  margin-right: 20px;
+  margin: 10px 20px 0 0;
+
   font-size: 13px;
   font-weight: 500;
+  position: relative;
+  z-index: 100;
 }
 
 .breadcrumb-item {
@@ -48,22 +52,19 @@
   font-weight: 600;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .breadcrumb-list {
     gap: 6px;
     font-size: 11px;
+    margin: 30px 12px 0 0;
+    margin-bottom: 10px;
   }
 
   .breadcrumb-item {
     gap: 6px;
   }
-}
-@media (max-width: 767px) {
-  .breadcrumb-list {
-   margin-top: 20px;
-  }
 
-.breadcrumb-item:first-child a {
-  font-size: 12px;
-}
+  .breadcrumb-item:first-child a {
+    font-size: 12px;
+  }
 }

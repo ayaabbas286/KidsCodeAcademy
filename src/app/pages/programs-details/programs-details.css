@@ -189,10 +189,9 @@
 }
 .view-btn {
   margin-top: -17px;
-  border-radius: 10px;
-  padding: 7px 15px;
+  border-radius: 20px !important;
+  padding: 10px 20px !important;
   border: none;
-
   display: inline-block;
   text-decoration: none;
 }
@@ -210,7 +209,11 @@
   transform: translateY(-2px);
   /* border: 1px solid rgb(49, 0, 147); */
 }
-
+.projects hr {
+  border: 5px solid rgb(49, 0, 147);
+  width: 20px;
+  height: 25px;
+}
 .projects-count p {
   font-size: 14px;
   color: black;
@@ -526,7 +529,7 @@
     width: 100%;
   }
   .text-box h3 {
-    margin-top: 25px;
+    margin-top: 50px;
     font-size: 32px;
     margin-bottom: 0 !important;
   }

@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Programs } from '../../core/services/programs';
-import { NgClass } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -9,7 +9,7 @@ import {
 
 @Component({
   selector: 'app-program-details',
-  imports: [NgClass, RouterLink, Breadcrumb],
+  imports: [NgClass, RouterLink, Breadcrumb,CommonModule],
   templateUrl: './program-details.html',
   styleUrl: './program-details.css',
 })

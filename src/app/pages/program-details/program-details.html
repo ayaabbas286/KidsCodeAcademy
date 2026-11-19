@@ -82,17 +82,147 @@
 
     <section class="detail-hero container" [ngClass]="program.theme"></section>
   </div>
-
   <section class="detail-features container shadow p-4">
-    <div class="d-flex justify-between align-center">
-    <div>
-      <h3>إيه اللي هيتعلمه طفلك؟</h3>
-      <ul>
-        @for (feature of program.features; track feature) {
-          <li>{{ feature }}</li>
-        }
-      </ul>
+    <div class="features-content">
+      <div class="features-text">
+        <h3>ماذا سيتعلم طفلك؟</h3>
+
+        <ul>
+          @for (feature of program.features; track feature) {
+            <li>{{ feature }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="features-image">
+        <img [src]="program.featuresImage" [alt]="program.title" />
+      </div>
     </div>
-    <div class="img-container"><img [src]="program.featuresImage" [alt]="program.title" /></div></div>
+
+    <div class="circle circle6"></div>
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle5"></div>
   </section>
+
+  <div class="container">
+    <section class="projects">
+      <h3 class="text-center">مشاريع البرنامج</h3>
+      <hr class="projects-divider" />
+
+      <div class="projects-cards">
+        @for (project of program.projects; track project.title) {
+          <article class="project-card">
+            <div class="project-image">
+              <img [src]="project.image" [alt]="project.title" />
+            </div>
+
+            <div class="project-info">
+              <h4>{{ project.title }}</h4>
+              <p>{{ project.description }}</p>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+    <!-- Program Price -->
+    <section class="program-price container">
+      <div class="price-content shadow">
+        <div class="price-info">
+          <div class="d-flex flex-column align-center justify-content-center mx-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28 "
+              fill="currentColor"
+              class="bi bi-stars"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"
+              />
+            </svg>
+            <span>السعر</span>
+          </div>
+
+          <h2>{{ program.price }} <small>ج</small></h2>
+        </div>
+
+        <div class="price-divider"></div>
+
+        <a class="price-btn" routerLink="/register" [queryParams]="{ program: program.value }">
+          احجز البرنامج الآن
+          <i class="pi pi-arrow-left"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- learning path  -->
+    @if (program?.learningJourney?.length) {
+      <section class="learning-journey container">
+        <h3>رحلة التعلم</h3>
+        <hr class="projects-divider" />
+
+        <div class="journey-steps">
+          @for (step of program.learningJourney; track step.id; let last = $last) {
+            <div class="journey-step shadow">
+              <span class="step-number shadow-lg">
+                {{ step.id }}
+              </span>
+
+              <div class="step-content">
+                <i [class]="step.icon"></i>
+
+                <div> 
+                  <h5>{{ step.title }}</h5>
+                </div>
+              </div>
+            </div>
+            @if (!last) {
+              <i class="pi pi-arrow-left journey-arrow"> </i>
+            }
+          }
+        </div>
+      </section>
+    }
+
+    <!-- requirments  -->
+    @if (program?.requirements) {
+      <div class="accordion m-4" dir="rtl ">
+        <h3>الأسئلة الشائعة</h3>
+        <hr class="projects-divider" />
+        <details class="accordion-item p-2" name="accordionExample" open>
+          <summary class="accordion-header">هل يحتاج الطفل الى خبرة سابقة ؟</summary>
+          <div class="accordion-body">
+            <p>{{ program.requirements.previousExperience }}</p>
+          </div>
+        </details>
+        <!-- Required Devices -->
+        <details class="accordion-item p-2" name="accordionExample ">
+          <summary class="accordion-header">ما هي الأجهزة المطلوبة؟</summary>
+
+          <div class="accordion-body">
+            <ul>
+              @for (device of program.requirements.devices; track $index) {
+                <li>{{ device }}</li>
+              }
+            </ul>
+          </div>
+        </details>
+
+        <!-- Technologies -->
+        <details class="accordion-item p-2" name="accordionExample">
+          <summary class="accordion-header">المهارات والتقنيات</summary>
+
+          <div class="accordion-body">
+            <ul>
+              @for (technology of program.requirements.technologies; track $index) {
+                <li>{{ technology }}</li>
+              }
+            </ul>
+          </div>
+        </details>
+      </div>
+    }
+  </div>
 }
