@@ -1,0 +1,675 @@
+/* ================= MAIN HEADER ================= */
+.main-content {
+  position: relative;
+  padding: 20px;
+  height: 410px;
+  background-color: var(--background);
+}
+
+.custom-container {
+  width: 1600px;
+  margin: 10px auto;
+}
+
+/* ================= DECORATIVE CIRCLES ================= */
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+.circle1 {
+  width: 40px;
+  height: 40px;
+  left: 52%;
+  bottom: 75px;
+  background-color: #000dff;
+}
+
+.circle2 {
+  top: 38px;
+  right: 43%;
+  background-color: rgb(255, 247, 0);
+  opacity: 0.3;
+}
+
+.circle3 {
+  right: 95px;
+  bottom: 43px;
+  background-color: rgb(0, 255, 118);
+}
+
+.circle4 {
+  left: 9%;
+  bottom: 55px;
+  background-color: rgb(119, 0, 255);
+}
+
+.circle5 {
+  top: 77px;
+  right: 7%;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(248, 124, 124);
+  opacity: 0.5;
+}
+
+.circle6 {
+  width: 70px;
+  height: 70px;
+  top: 65px;
+  left: 50px;
+  background-color: rgb(0, 255, 204);
+}
+
+.circle7 {
+  width: 25px;
+  height: 25px;
+  top: 158px;
+  left: 16%;
+  background-color: rgb(255, 0, 0);
+}
+
+/* ================= IMAGE & TEXT ================= */
+.img-container {
+  width: 50%;
+}
+
+.img-container img {
+  height: auto;
+}
+
+.text-box {
+  width: 50%;
+}
+
+.text-box h3 {
+  font-size: 42px;
+  background-image: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+  color: transparent;
+  background-clip: text;
+  height: 55px;
+}
+
+.sub-text-box h3 {
+  color: #000;
+}
+
+/* ================= PROGRAM TABS ================= */
+.program-tabs {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  margin: 25px auto;
+}
+
+.program-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px;
+  width: 220px;
+  background-color: #eee;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  color: var(--primary-dark);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    color 0.3s ease-in-out,
+    background 0.3s ease-in,
+    border-color 0.3s ease-in-out;
+}
+
+.program-tab.active {
+  color: #fff;
+  border-color: var(--primary-dark);
+  background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+}
+
+.program-tab i.pi {
+  font-size: 16px;
+}
+
+.f-line,
+.l-line {
+  height: 3px;
+  width: 50px;
+  background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+/* ================= PROGRAM CARDS ================= */
+.program-card {
+  position: relative;
+  height: 100%;
+  border-radius: 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  margin: 10px;
+  border: 2px solid #eee;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.program-card .content {
+  height: 100%;
+}
+
+.programs-cards .row {
+  row-gap: 24px;
+}
+
+.discover-programs {
+  margin-bottom: 50px;
+}
+
+.program-card img {
+  width: 450px;
+  height: auto;
+}
+
+.age-badge {
+  width: fit-content;
+  font-size: 14px;
+  color: #000;
+  border-radius: 10px;
+  padding: 3px 10px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.pi-arrow-left {
+  position: relative;
+  top: 3px;
+}
+
+.breadcrumb-nav {
+  top: 0;
+  right: 0;
+}
+
+.view-btn {
+  margin-top: -17px;
+  border-radius: 20px !important;
+  padding: 10px 20px !important;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.projects hr {
+  border: 5px solid rgb(49, 0, 147);
+  width: 20px;
+  height: 25px;
+}
+
+.projects-count p {
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+}
+
+.duration p {
+  font-size: 14px;
+  color: rgb(34, 34, 34);
+  font-weight: 500;
+}
+
+/* ================= CARD COLORS ================= */
+.program-card.web,
+.program-card.robot {
+  background-color: #d5d7ff;
+  border-color: #8d93ff59 !important;
+  box-shadow: 0 0 10px rgba(49, 0, 147, 0.2);
+}
+
+.program-card.ai,
+.program-card.games {
+  background-color: #e9d1ff;
+  border-color: #f98dff59 !important;
+  box-shadow: 0 0 10px #f98dff59;
+}
+
+.program-card.graphic {
+  background-color: rgb(255, 236, 214);
+  border-color: rgba(252, 178, 93, 0.613) !important;
+  box-shadow: 0 0 10px rgb(255, 213, 166);
+}
+
+.program-card.mobile {
+  background-color: rgb(231, 255, 231);
+  border-color: rgba(170, 252, 93, 0.613) !important;
+  box-shadow: 0 0 10px rgb(191, 255, 166);
+}
+
+/* ================= OTHER CARD THEME COLORS ================= */
+.program-card.ai {
+  --card-accent: #7b2cbf;
+  --card-accent-light: #d9b8ff;
+  --card-text: #5b258c;
+}
+
+.program-card.games {
+  --card-accent: #7b2cbf;
+  --card-accent-light: #d9b8ff;
+  --card-text: #5b258c;
+}
+
+.program-card.graphic {
+  --card-accent: #c66a16;
+  --card-accent-light: #ffd2a6;
+  --card-text: #8a4b12;
+}
+
+.program-card.mobile {
+  --card-accent: #248044;
+  --card-accent-light: #c5efc5;
+  --card-text: #27633b;
+}
+
+.program-card.ai h4,
+.program-card.games h4,
+.program-card.graphic h4,
+.program-card.mobile h4 {
+  color: var(--card-accent);
+}
+
+.program-card.ai .program-description,
+.program-card.games .program-description,
+.program-card.graphic .program-description,
+.program-card.mobile .program-description,
+.program-card.ai .features,
+.program-card.games .features,
+.program-card.graphic .features,
+.program-card.mobile .features,
+.program-card.ai .features li,
+.program-card.games .features li,
+.program-card.graphic .features li,
+.program-card.mobile .features li,
+.program-card.ai .features .pi-check,
+.program-card.games .features .pi-check,
+.program-card.graphic .features .pi-check,
+.program-card.mobile .features .pi-check,
+.program-card.ai .projects-count span,
+.program-card.games .projects-count span,
+.program-card.graphic .projects-count span,
+.program-card.mobile .projects-count span,
+.program-card.ai .duration span,
+.program-card.games .duration span,
+.program-card.graphic .duration span,
+.program-card.mobile .duration span {
+  color: var(--card-text);
+}
+
+.program-card.ai .age-badge,
+.program-card.games .age-badge,
+.program-card.graphic .age-badge,
+.program-card.mobile .age-badge {
+  background-color: var(--card-accent-light);
+  color: var(--card-accent);
+}
+
+.program-card.ai .view-btn,
+.program-card.games .view-btn,
+.program-card.graphic .view-btn,
+.program-card.mobile .view-btn {
+  background-color: var(--card-accent);
+  color: #fff;
+  border: 1px solid var(--card-accent);
+  transition: 0.3s ease;
+}
+
+.program-card.ai .view-btn:hover,
+.program-card.games .view-btn:hover,
+.program-card.graphic .view-btn:hover,
+.program-card.mobile .view-btn:hover {
+  background-color: #fff;
+  color: var(--card-accent);
+}
+
+/* ================= WEB & ROBOT TEXT ================= */
+.program-card.web h4,
+.program-card.robot h4,
+.program-card.web .features,
+.program-card.robot .features,
+.program-card.web .features li,
+.program-card.robot .features li,
+.program-card.web .features .pi-check,
+.program-card.robot .features .pi-check,
+.program-card.web .projects-count span,
+.program-card.robot .projects-count span,
+.program-card.web .duration span,
+.program-card.robot .duration span {
+  color: #310093;
+}
+
+.program-card.web .program-description,
+.program-card.robot .program-description {
+  color: #4b3b80;
+}
+
+.program-card.web .age-badge,
+.program-card.robot .age-badge {
+  background-color: #b9bcff;
+  color: #310093;
+}
+
+.program-card.web .view-btn,
+.program-card.robot .view-btn {
+  background-color: #310093;
+  color: #fff;
+  border: 1px solid #310093;
+  transition: 0.3s ease;
+}
+
+.program-card.web .view-btn:hover,
+.program-card.robot .view-btn:hover {
+  background-color: #fff;
+  color: #310093;
+}
+
+/* ================= LARGE SCREENS ================= */
+@media (min-width: 1200px) {
+  .main-content {
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle4 {
+    width: 50px;
+    height: 50px;
+    left: 3%;
+    bottom: 20px;
+  }
+
+  .circle5 {
+    width: 40px;
+    height: 40px;
+    left: 5%;
+    top: 40px;
+  }
+
+  .circle7 {
+    display: none;
+  }
+}
+/* Buttons Hover Colors */
+
+/* Web & Robot */
+.program-card.web .view-btn:hover,
+.program-card.robot .view-btn:hover {
+  background-color: #5140b5;
+  color: #fff;
+}
+
+/* AI & Games */
+.program-card.ai .view-btn:hover,
+.program-card.games .view-btn:hover {
+  background-color: #a66be0;
+  color: #fff;
+}
+
+/* Graphic Design */
+.program-card.graphic .view-btn:hover {
+  background-color: #e9a45e;
+  color: #fff;
+}
+
+/* Mobile Development */
+.program-card.mobile .view-btn:hover {
+  background-color: #65b879;
+  color: #fff;
+}
+/* ================= MEDIUM / LARGE SCREENS ================= */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-content {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-container img {
+    height: auto;
+  }
+
+  .program-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .program-tabs .program-tab {
+    gap: 5px;
+    font-size: 14px !important;
+  }
+  .program-card > div {
+    flex-direction: column;
+  }
+  .circle1 {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+  }
+
+  .circle2 {
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 40%;
+  }
+
+  .circle3 {
+    width: 30px;
+    height: 30px;
+    right: 80px;
+    bottom: 10px;
+  }
+
+  .circle4 {
+    width: 30px;
+    height: 30px;
+    left: 5%;
+    bottom: 40px;
+  }
+
+  .circle5 {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 2%;
+  }
+
+  .circle6 {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 30px;
+  }
+
+  .circle7 {
+    display: none;
+  }
+
+  .program-tabs .program-tab {
+    width: 250px;
+    gap: 5px;
+    font-size: 12px;
+  }
+}
+
+/* ================= TABLETS ================= */
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-content {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .program-card > div {
+    flex-direction: column;
+  }
+
+  .circle1 {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+  }
+
+  .circle2 {
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 40%;
+  }
+
+  .circle3 {
+    width: 30px;
+    height: 30px;
+    right: 80px;
+    bottom: 10px;
+  }
+
+  .circle4 {
+    width: 30px;
+    height: 30px;
+    left: 5%;
+    bottom: 40px;
+  }
+  .view-btn {
+    margin-top: 10px;
+  }
+
+  .circle5 {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 2%;
+  }
+  .card-body h4 {
+    margin-top: 20px;
+  }
+  .circle6 {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 30px;
+  }
+
+  .circle7 {
+    display: none;
+  }
+
+  .program-tabs .program-tab {
+    width: 200px;
+    padding: 6px 2px;
+    gap: 5px;
+    font-size: 10px !important;
+  }
+  .card-body {
+    text-align: center;
+  }
+  .card-body > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-body ul {
+    height: 105px;
+  }
+  .program-card.ai  .card-body ul{
+    height: 137px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 767px) {
+  .main-content {
+    height: 450px;
+    padding: 10px;
+  }
+
+  .main-content .container > div {
+    flex-direction: column;
+    height: 390px;
+  }
+
+  .img-container,
+  .text-box {
+    text-align: center;
+    width: 100%;
+  }
+
+  .text-box h3 {
+    margin-top: 50px;
+    font-size: 32px;
+    margin-bottom: 0 !important;
+  }
+
+  .img-container img {
+    width: 100%;
+    height: 230px;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .program-tab {
+    width: auto;
+    padding: 0;
+  }
+
+  .program-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: stretch;
+    padding: 0 10px;
+  }
+
+  .program-tabs .program-tab {
+    width: 100%;
+    padding: 10px 6px;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .program-card {
+    height: auto;
+  }
+  .program-card .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-body > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .view-btn {
+    margin-top: 10px;
+  }
+
+  .program-card img {
+    height: 200px;
+    width: 200px;
+  }
+  .age-badge {
+    margin-top: 10px;
+  }
+}

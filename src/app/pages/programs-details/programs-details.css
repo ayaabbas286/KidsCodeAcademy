@@ -62,7 +62,7 @@
   width: 50%;
 }
 .img-container img {
-  height: 360px;
+  height: auto;
 }
 .text-box {
   width: 50%;
@@ -368,7 +368,7 @@
 
 @media (min-width: 1200px) {
   .main-content {
-    height: 350px;
+     height: 480px;
     display: flex;
     justify-content: center;
     align-items: center;

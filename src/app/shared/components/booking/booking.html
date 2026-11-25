@@ -1,0 +1,494 @@
+<div class="booking-page">
+  <!-- Decorative Background -->
+  <div class="booking-circle circle-1"></div>
+  <div class="booking-circle circle-2"></div>
+  <div class="booking-circle circle-3"></div>
+  <div class="booking-circle circle-4"></div>
+  <div class="booking-circle circle-5"></div>
+
+  <!-- Hero Section -->
+  <section class="booking-hero">
+    <div class="container hero-container">
+      <div class="hero-illustration">
+        <img src="assets/images/imagePaths/code.png" alt="Booking illustration" />
+      </div>
+
+      <div class="hero-content">
+        <span class="hero-label">
+          <i class="pi pi-calendar"></i>
+          حجز المحتوى التعليمي
+        </span>
+
+        <h1>
+          ابدأ رحلة طفلك
+          <span>في عالم التكنولوجيا!</span>
+        </h1>
+
+        <p>خطوة واحدة تفصل طفلك عن تجربة تعليمية ممتعة مليئة بالإبداع واكتشاف مهارات جديدة.</p>
+
+        <div class="hero-features">
+          <div class="hero-feature">
+            <i class="pi pi-check-circle"></i>
+            تعلم عملي
+          </div>
+
+          <div class="hero-feature">
+            <i class="pi pi-check-circle"></i>
+            مشاريع حقيقية
+          </div>
+
+          <div class="hero-feature">
+            <i class="pi pi-check-circle"></i>
+            مدربون متخصصون
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking-section container">
+    <!-- Section Header -->
+    <div class="booking-section-header">
+      <span class="section-eyebrow">
+        <span class="eyebrow-dot"></span>
+        سجل الآن
+      </span>
+
+      <h2>بيانات الحجز</h2>
+
+      <p>املأ البيانات التالية وسنتواصل معك لتأكيد تفاصيل الحجز</p>
+    </div>
+
+    <!-- Booking Layout -->
+    <div class="booking-layout">
+      <!-- Booking Form -->
+      <div class="booking-form-card">
+        @if (!isSuccess) {
+          <form [formGroup]="bookingForm" (ngSubmit)="submitBooking()">
+            <!-- Parent Information -->
+            <div class="form-section">
+              <div class="form-section-title">
+                <div class="section-icon">
+                  <i class="pi pi-user"></i>
+                </div>
+
+                <div>
+                  <h3>بيانات ولي الأمر</h3>
+                  <p>بيانات التواصل لتأكيد الحجز</p>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <!-- Parent Name -->
+                <div class="form-group full-width">
+                  <label for="parentName">
+                    الاسم بالكامل
+                    <span>*</span>
+                  </label>
+
+                  <div class="input-wrapper">
+                    <i class="pi pi-user input-icon"></i>
+
+                    <input
+                      id="parentName"
+                      type="text"
+                      formControlName="parentName"
+                      placeholder="اكتب اسم ولي الأمر"
+                    />
+                  </div>
+
+                  @if (f['parentName'].touched && f['parentName'].invalid) {
+                    <small class="error-message">
+                      @if (f['parentName'].errors?.['required']) {
+                        الاسم مطلوب
+                      }
+
+                      @if (f['parentName'].errors?.['minlength']) {
+                        الاسم يجب أن يكون 3 أحرف على الأقل
+                      }
+                    </small>
+                  }
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label for="phone">
+                    رقم الهاتف
+                    <span>*</span>
+                  </label>
+
+                  <div class="input-wrapper">
+                    <i class="pi pi-phone input-icon"></i>
+
+                    <input
+                      id="phone"
+                      type="tel"
+                      formControlName="phone"
+                      placeholder="01xxxxxxxxx"
+                      dir="ltr"
+                    />
+                  </div>
+
+                  @if (f['phone'].touched && f['phone'].invalid) {
+                    <small class="error-message">
+                      @if (f['phone'].errors?.['required']) {
+                        رقم الهاتف مطلوب
+                      }
+
+                      @if (f['phone'].errors?.['pattern']) {
+                        أدخل رقم هاتف مصري صحيح
+                      }
+                    </small>
+                  }
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email"> البريد الإلكتروني </label>
+
+                  <div class="input-wrapper">
+                    <i class="pi pi-envelope input-icon"></i>
+
+                    <input
+                      id="email"
+                      type="email"
+                      formControlName="email"
+                      placeholder="example@email.com"
+                      dir="ltr"
+                    />
+                  </div>
+
+                  @if (f['email'].touched && f['email'].invalid) {
+                    <small class="error-message"> البريد الإلكتروني غير صحيح </small>
+                  }
+                </div>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="form-divider"></div>
+
+            <!-- Child Information -->
+            <div class="form-section">
+              <div class="form-section-title">
+                <div class="section-icon child-icon">
+                  <i class="pi pi-users"></i>
+                </div>
+
+                <div>
+                  <h3>بيانات الطفل</h3>
+                  <p>معلومات الطالب الذي سينضم للمحتوى التعليمي</p>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <!-- Child Name -->
+                <div class="form-group">
+                  <label for="childName">
+                    اسم الطفل
+                    <span>*</span>
+                  </label>
+
+                  <div class="input-wrapper">
+                    <i class="pi pi-user input-icon"></i>
+
+                    <input
+                      id="childName"
+                      type="text"
+                      formControlName="childName"
+                      placeholder="اسم الطفل"
+                    />
+                  </div>
+
+                  @if (f['childName'].touched && f['childName'].invalid) {
+                    <small class="error-message">
+                      @if (f['childName'].errors?.['required']) {
+                        اسم الطفل مطلوب
+                      }
+
+                      @if (f['childName'].errors?.['minlength']) {
+                        الاسم يجب أن يكون حرفين على الأقل
+                      }
+                    </small>
+                  }
+                </div>
+
+                <!-- Child Age -->
+                <div class="form-group">
+                  <label for="childAge">
+                    عمر الطفل
+                    <span>*</span>
+                  </label>
+
+                  <div class="input-wrapper">
+                    <i class="pi pi-calendar input-icon"></i>
+
+                    <select id="childAge" formControlName="childAge">
+                      <option value="" disabled>اختر عمر الطفل</option>
+
+                      @for (age of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17]; track age) {
+                        <option [value]="age">{{ age }} سنة</option>
+                      }
+                    </select>
+                  </div>
+
+                  @if (f['childAge'].touched && f['childAge'].invalid) {
+                    <small class="error-message"> يرجى اختيار عمر الطفل </small>
+                  }
+                </div>
+
+                <!-- Preferred Contact Time -->
+                <div class="form-group full-width">
+                  <label for="preferredTime">
+                    الوقت المناسب للتواصل
+                    <span>*</span>
+                  </label>
+
+                  <div class="input-wrapper">
+                    <i class="pi pi-clock input-icon"></i>
+
+                    <select id="preferredTime" formControlName="preferredTime">
+                      <option value="" disabled>اختر الوقت المناسب</option>
+
+                      <option value="morning">صباحًا (10 ص - 2 م)</option>
+
+                      <option value="afternoon">بعد الظهر (2 م - 6 م)</option>
+
+                      <option value="evening">مساءً (6 م - 10 م)</option>
+                    </select>
+                  </div>
+
+                  @if (f['preferredTime'].touched && f['preferredTime'].invalid) {
+                    <small class="error-message"> يرجى اختيار وقت التواصل </small>
+                  }
+                </div>
+
+                <!-- Notes -->
+                <div class="form-group full-width">
+                  <label for="notes"> ملاحظات إضافية </label>
+
+                  <textarea
+                    id="notes"
+                    formControlName="notes"
+                    rows="4"
+                    placeholder="هل لديك أي استفسارات أو ملاحظات؟"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-booking-btn">
+              <span>تأكيد طلب الحجز</span>
+
+              <i class="pi pi-arrow-left"></i>
+            </button>
+
+            <!-- Privacy Note -->
+            <p class="form-note">
+              <i class="pi pi-shield"></i>
+
+              بياناتك آمنة ولن يتم استخدامها إلا للتواصل بخصوص الحجز
+            </p>
+          </form>
+        }
+
+        <!-- Success State -->
+        @if (isSuccess) {
+          <div class="success-state">
+            <div class="success-icon">
+              <i class="pi pi-check"></i>
+            </div>
+
+            <h2>تم إرسال طلب الحجز بنجاح!</h2>
+
+            <p>
+              شكرًا لثقتك في KidsCode Academy. سيقوم فريقنا بالتواصل معك قريبًا لتأكيد تفاصيل الحجز.
+            </p>
+
+            <button class="submit-booking-btn" type="button" (click)="isSuccess = false">
+              <span>حجز محتوى آخر</span>
+
+              <i class="pi pi-arrow-left"></i>
+            </button>
+          </div>
+        }
+      </div>
+
+      <!-- Booking Summary -->
+      <aside class="booking-summary">
+        <!-- Summary Header -->
+        <div class="summary-header">
+          <span>ملخص الحجز</span>
+
+          <div class="summary-icon">
+            <i class="pi pi-book"></i>
+          </div>
+        </div>
+
+        <!-- Item Information -->
+        <div class="summary-program">
+          <div class="program-image">
+            <img [src]="item.image" [alt]="item.title" />
+          </div>
+
+          <h3>{{ item.title }}</h3>
+
+          <p>{{ item.subtitle }}</p>
+
+          <!-- Item Type -->
+          <span class="item-type-badge">
+            @if (item.type === 'path') {
+              مسار تعليمي
+            } @else {
+              برنامج تعليمي
+            }
+          </span>
+        </div>
+
+        <!-- Item Details -->
+        <div class="summary-details">
+          <!-- Duration -->
+          <div class="summary-detail">
+            <div class="detail-icon">
+              <i class="pi pi-calendar"></i>
+            </div>
+
+            <div>
+              <span>المدة</span>
+              <strong>{{ item.duration }}</strong>
+            </div>
+          </div>
+
+          <!-- Age Range -->
+          <div class="summary-detail">
+            <div class="detail-icon">
+              <i class="pi pi-users"></i>
+            </div>
+
+            <div>
+              <span>الفئة العمرية</span>
+              <strong>{{ item.ageRange }}</strong>
+            </div>
+          </div>
+
+          <!-- Level -->
+          <div class="summary-detail">
+            <div class="detail-icon">
+              <i class="pi pi-chart-bar"></i>
+            </div>
+
+            <div>
+              <span>المستوى</span>
+              <strong>{{ item.level }}</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="summary-price">
+          <span>سعر المحتوى</span>
+
+          <div class="price-value">
+            {{ item.price | number }}
+
+            <small>جنيه</small>
+          </div>
+        </div>
+
+        <!-- Summary Note -->
+        <div class="summary-note">
+          <i class="pi pi-info-circle"></i>
+
+          <p>سيتم التواصل معك لتأكيد الحجز وتوضيح تفاصيل الدفع.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Booking Steps -->
+  <section class="booking-steps-section container">
+    <!-- Section Header -->
+    <div class="booking-section-header">
+      <span class="section-eyebrow">
+        <span class="eyebrow-dot"></span>
+        خطوات بسيطة
+      </span>
+
+      <h2>ماذا يحدث بعد الحجز؟</h2>
+
+      <p>خطوات بسيطة حتى يبدأ طفلك رحلته التعليمية</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="booking-steps">
+      <!-- Step 1 -->
+      <div class="booking-step">
+        <div class="step-number">1</div>
+
+        <div class="step-icon">
+          <i class="pi pi-send"></i>
+        </div>
+
+        <h3>إرسال الطلب</h3>
+
+        <p>أرسل بيانات الحجز من خلال النموذج</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="booking-step">
+        <div class="step-number">2</div>
+
+        <div class="step-icon">
+          <i class="pi pi-phone"></i>
+        </div>
+
+        <h3>التواصل معك</h3>
+
+        <p>سيتواصل فريقنا لتأكيد التفاصيل</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="booking-step">
+        <div class="step-number">3</div>
+
+        <div class="step-icon">
+          <i class="pi pi-check-circle"></i>
+        </div>
+
+        <h3>تأكيد الاشتراك</h3>
+
+        <p>تأكيد الحجز وتجهيز الطفل للبدء</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="booking-step">
+        <div class="step-number">4</div>
+
+        <div class="step-icon">
+          <i class="pi pi-star"></i>
+        </div>
+
+        <h3>ابدأ التعلم</h3>
+
+        <p>انطلق في رحلة ممتعة من التعلم والإبداع</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="booking-cta container">
+    <div class="cta-content">
+      <div class="cta-icon">
+        <i class="pi pi-star"></i>
+      </div>
+
+      <div>
+        <h3>مستقبل طفلك يبدأ بخطوة!</h3>
+
+        <p>ساعد طفلك على اكتشاف شغفه وتطوير مهاراته</p>
+      </div>
+    </div>
+  </section>
+</div>

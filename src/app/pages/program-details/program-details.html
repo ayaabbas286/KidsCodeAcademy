@@ -66,11 +66,7 @@
               </div>
             </div>
           </div>
-          <a
-            class="subscribe-btn btn-main"
-            routerLink="/register"
-            [queryParams]="{ program: program.value }"
-          >
+          <a class="subscribe-btn btn-main" [routerLink]="['/booking', program.value]">
             اشترك الآن <i class="pi pi-arrow-left"></i>
           </a>
         </div>
@@ -150,7 +146,7 @@
 
         <div class="price-divider"></div>
 
-        <a class="price-btn" routerLink="/register" [queryParams]="{ program: program.value }">
+        <a class="price-btn" [routerLink]="['/booking', program.value]">
           احجز البرنامج الآن
           <i class="pi pi-arrow-left"></i>
         </a>
@@ -173,7 +169,7 @@
               <div class="step-content">
                 <i [class]="step.icon"></i>
 
-                <div> 
+                <div>
                   <h5>{{ step.title }}</h5>
                 </div>
               </div>

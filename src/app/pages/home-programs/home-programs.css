@@ -13,7 +13,6 @@
 .programs-cards-container .card {
   border-radius: 15px;
   padding: 10px;
- 
 }
 .programs-cards-container .img-container {
   display: flex;
@@ -42,19 +41,19 @@
 }
 .explorer {
   background-color: #f5e6fd;
-  border: 2px solid #e3b7ffec ;
+  border: 2px solid #e3b7ffec;
 }
 .beginner {
   background-color: #deedff;
-   border: 2px solid #a5cfff ;
+  border: 2px solid #a5cfff;
 }
 .inventor {
   background-color: #dbffe2;
-  border: 2px solid #87ff9f ;
+  border: 2px solid #87ff9f;
 }
 .expertDev {
   background-color: #ffefcf;
-  border: 2px solid #ffd786 ;
+  border: 2px solid #ffd786;
 }
 .btn-explorer {
   color: var(--primary-dark);
@@ -74,7 +73,7 @@
 .program-card-description {
   font-size: 16px;
   margin-right: 10px;
-  line-height: 0.75;
+  line-height: 1.5;
 }
 .program-card-body ul {
   list-style-type: disc;

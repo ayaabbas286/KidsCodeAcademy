@@ -1,0 +1,8 @@
+@if (bookingItem) {
+  <app-booking [item]="bookingItem"></app-booking>
+} @else {
+  <div class="booking-not-found text-center py-5">
+    <h2>Item not found</h2>
+    <p>We couldn't find the selected program or learning path.</p>
+  </div>
+}

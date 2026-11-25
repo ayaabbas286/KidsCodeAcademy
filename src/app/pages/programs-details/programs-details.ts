@@ -3,7 +3,6 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { LearningPaths } from '../learning-paths/learning-paths';
 import { Programs } from '../../core/services/programs';
 import { RouterLink } from '@angular/router';
-import { ProgramDetails } from '../program-details/program-details';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -22,10 +21,10 @@ export class ProgramsDetails {
   activeFilter = signal('all');
   tabs = [
     { title: 'كل البرامج', value: 'all', icon: 'pi pi-th-large' },
-    { title: 'المستكشف الصغير', value: 'little', ageRange: '5-8', icon: 'pi pi-user' },
-    { title: 'المبرمج المبتدئ', value: 'beginner', ageRange: '8-10', icon: 'pi pi-star' },
-    { title: 'المبرمج المبدع', value: 'creative', ageRange: '10-13', icon: 'pi pi-trophy' },
-    { title: 'المبرمج المحترف', value: 'advanced', ageRange: '13-16', icon: 'pi pi-sparkles' },
+    { title: 'المستكشف الصغير', value: 'little', ageRange: '8-5', icon: 'pi pi-user' },
+    { title: 'المبرمج المبتدئ', value: 'beginner', ageRange: '10-8', icon: 'pi pi-star' },
+    { title: 'المبرمج المبدع', value: 'creative', ageRange: '13-10', icon: 'pi pi-trophy' },
+    { title: 'المبرمج المحترف', value: 'advanced', ageRange: '16-13', icon: 'pi pi-sparkles' },
   ];
 
   filteredPrograms = computed(() => {

@@ -10,6 +10,7 @@ export class Programs {
       icon: 'pi-face-smile',
       ageRange: '5-8',
       ageLabel: '5 - 8 سنوات',
+      classStyle: 'explorer',
       description:
         'برنامج ممتع وبسيط يعرّف طفلك بأساسيات البرمجة من خلال الألعاب والأنشطة التفاعلية',
       features: ['مفاهيم البرمجة الأساسية', 'التفكير المنطقي والإبداعي', 'بناء ألعاب بسيطة'],
@@ -83,6 +84,8 @@ export class Programs {
       duration: 'شهرين ونص',
       projectsCount: 3,
       theme: 'green',
+      classStyle: 'beginner',
+
       image: 'assets/images/programs/beginner.png',
       price: 1500,
       featuresImage: 'assets/images/programsFeatures/ScratchJr.png',
@@ -154,6 +157,7 @@ export class Programs {
       ],
       duration: '3 شهور',
       projectsCount: 4,
+      classStyle: 'inventor',
       theme: 'orange',
       image: 'assets/images/programs/inventor.png',
       price: 1800,
@@ -225,6 +229,8 @@ export class Programs {
         'بناء مشاريع حقيقية على GitHub',
       ],
       duration: '4 شهور ',
+      classStyle: 'expertDev',
+
       projectsCount: 6,
       theme: 'purple',
       image: 'assets/images/programs/expertDev.png',

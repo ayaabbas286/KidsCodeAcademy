@@ -4,11 +4,13 @@ import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   ElementRef,
+  inject,
   ViewChild,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { LearningPathsService } from '../../core/services/learning-paths';
 
 export interface LearningPath {
   id: number;
@@ -52,55 +54,6 @@ export class LearningPaths implements AfterViewInit {
       },
     });
   }
-  learningPaths: LearningPath[] = [
-    {
-      id: 1,
-      title: 'تطوير الويب',
-      description: 'تعلم HTML و CSS و JavaScript وابني مواقع ويب احترافية.',
-      icon: 'assets/images/imagePaths/landing-page.png',
-      route: '/paths/web-development',
-      classStyle: 'web',
-    },
-    {
-      id: 2,
-      title: 'الذكاء الاصطناعي',
-      description: 'اكتشف عالم الذكاء الاصطناعي وتعلم Machine Learning.',
-      icon: 'assets/images/imagePaths/artificial-intelligence.png',
-      route: '/paths/artificial-intelligence',
-      classStyle: 'ai',
-    },
-    {
-      id: 3,
-      title: 'تصميم الجرافيك',
-      description: 'تعلم أساسيات التصميم الجرافيكي باستخدام Photoshop و Illustrator.',
-      icon: 'assets/images/imagePaths/brush.png',
-      route: '/paths/graphic-design',
-      classStyle: 'graphic',
-    },
-
-    {
-      id: 4,
-      title: 'تطوير تطبيقات الموبايل',
-      description: 'بناء تطبيقات الموبايل باستخدام App Inventor و Flutter.',
-      icon: 'assets/images/imagePaths/code.png',
-      route: '/paths/mobile-development',
-      classStyle: 'mobile',
-    },
-    {
-      id: 5,
-      title: 'الروبوتات وإنترنت الأشياء',
-      description: 'تعلم Arduino والروبوتات وأنظمة إنترنت الأشياء.',
-      icon: 'assets/images/imagePaths/robot.png',
-      route: '/paths/robotics-iot',
-      classStyle: 'robot',
-    },
-    {
-      id: 6,
-      title: 'تطوير الألعاب',
-      description: 'اصنع ألعابك الخاصة وتعلم Game Design و Unity.',
-      icon: 'assets/images/imagePaths/game-console.png',
-      route: '/paths/game-development',
-      classStyle: 'games',
-    },
-  ];
+  private LearningPathsService = inject(LearningPathsService)
+  learningPaths = this.LearningPathsService.getAll();
 }

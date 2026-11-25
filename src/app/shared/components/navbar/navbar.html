@@ -10,9 +10,9 @@
           >الرئيسية</a
         >
       </li>
-      <li><a routerLink="/courses-levels" routerLinkActive="active">الدورات</a></li>
-      <li><a routerLink="/programs" routerLinkActive="active">المسارات التعليمية</a></li>
-      <li><a routerLink="/projects" routerLinkActive="active">المشاريع</a></li>
+      <li><a routerLink="/programs-details" routerLinkActive="active">البرامج</a></li>
+      <li><a routerLink="/paths" routerLinkActive="active">المسارات التعليمية</a></li>
+      
       <li><a routerLink="/about" routerLinkActive="active">من نحن</a></li>
       <li><a routerLink="/contact" routerLinkActive="active">تواصل معنا</a></li>
     </ul>
@@ -22,12 +22,12 @@
       <a routerLink="/login" routerLinkActive="active" class="login-btn normal-btn">تسجيل الدخول</a>
 
       <a routerLink="/register" routerLinkActive="active" class="register-btn">إنشاء حساب</a>
-      <button class="btn-main" routerLink="/projects">🚀 ابدأ التعلم</button>
+      <!-- <button class="btn-main" routerLink="/projects">🚀 ابدأ التعلم</button> -->
       <!-- Language -->
-      <button class="language-btn">
+      <!-- <button class="language-btn">
         <i class="bi bi-globe2"></i>
         AR
-      </button>
+      </button> -->
     </div>
     <!-- Mobile Toggle Button -->
     <div class="nav-buttons-mobile">
@@ -53,15 +53,17 @@
         >
       </li>
       <li>
-        <a routerLink="/courses-levels" routerLinkActive="active" (click)="closeMenu()">الدورات</a>
+        <a routerLink="/programs-details" routerLinkActive="active" (click)="closeMenu()"
+          >البرامج</a
+        >
       </li>
       <li>
-        <a routerLink="/programs" routerLinkActive="active" (click)="closeMenu()"
+        <a routerLink="/paths" routerLinkActive="active" (click)="closeMenu()"
           >المسارات التعليمية</a
         >
       </li>
       <li>
-        <a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">المشاريع</a>
+        <!-- <a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">المشاريع</a> -->
       </li>
       <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">من نحن</a></li>
       <li>
@@ -81,9 +83,9 @@
         تسجيل الدخول
       </a>
 
-      <button class="btn-main" routerLink="/projects" (click)="closeMenu()">
+      <!-- <button class="btn-main" routerLink="/projects" (click)="closeMenu()">
         <i class="fa-brands fa-angellist"></i> ابدأ التعلم
-      </button>
+      </button> -->
     </div>
   </div>
 

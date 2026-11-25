@@ -2,20 +2,19 @@ import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@ang
 import lottie, { AnimationItem } from 'lottie-web';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { WhyUs } from '../why-us/why-us';
 import { RouterLink } from '@angular/router';
-import { Programs } from '../programs/programs';
 import { LearningPaths } from '../learning-paths/learning-paths';
 import { Experience } from '../experience/experience';
 import { Reviews } from '../reviews/reviews';
 import { GetStarted } from '../get-started/get-started';
+import { HomePrograms } from '../home-programs/home-programs';
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ RouterLink, Programs, LearningPaths, Experience, Reviews, GetStarted],
+  imports: [ RouterLink, HomePrograms, LearningPaths, Experience, Reviews, GetStarted],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

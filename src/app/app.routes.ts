@@ -14,10 +14,7 @@ export const routes: Routes = [
         path: 'whyus',
         loadComponent: () => import('./pages/why-us/why-us').then((m) => m.WhyUs),
       },
-      {
-        path: 'programs',
-        loadComponent: () => import('./pages/programs/programs').then((m) => m.Programs),
-      },
+
       {
         path: 'paths',
         data: {
@@ -27,20 +24,27 @@ export const routes: Routes = [
           {
             path: '',
             loadComponent: () =>
-              import('./pages/learning-paths/learning-paths').then((m) => m.LearningPaths),
+              import('./pages/learning-path-details/learning-path-details').then(
+                (m) => m.LearningPathDetails,
+              ),
           },
-
           {
             path: ':slug',
             loadComponent: () =>
-              import('./pages/learning-paths/learning-paths').then((m) => m.LearningPaths),
+              import('./pages/path-details/path-details').then((m) => m.PathDetails),
           },
         ],
       },
+
       {
         path: 'courses-levels',
         loadComponent: () =>
           import('./pages/courses-levels/courses-levels').then((m) => m.CoursesLevels),
+      },
+      {
+        path: 'booking/:value',
+        loadComponent: () =>
+          import('./features/booking/pages/booking-page/booking-page').then((m) => m.BookingPage),
       },
       {
         path: 'contact',
@@ -95,6 +99,11 @@ export const routes: Routes = [
       {
         path: 'get-started',
         loadComponent: () => import('./pages/get-started/get-started').then((m) => m.GetStarted),
+      },
+      {
+        path: 'home-programs',
+        loadComponent: () =>
+          import('./pages/home-programs/home-programs').then((m) => m.HomePrograms),
       },
       {
         path: 'programs-details',

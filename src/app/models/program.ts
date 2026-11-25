@@ -29,6 +29,7 @@ export interface Program {
   featuresImage: string;
   price: number;
   projects: Project[];
+  classStyle: string;
   learningJourney: LearningStep[];
   requirements: ProgramRequirements;
 }

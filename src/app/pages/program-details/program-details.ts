@@ -9,7 +9,7 @@ import {
 
 @Component({
   selector: 'app-program-details',
-  imports: [NgClass, RouterLink, Breadcrumb,CommonModule],
+  imports: [NgClass, RouterLink, Breadcrumb, CommonModule],
   templateUrl: './program-details.html',
   styleUrl: './program-details.css',
 })
